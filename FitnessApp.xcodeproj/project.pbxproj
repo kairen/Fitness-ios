@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48397B941930B4C1A1438A14 /* libPods-FitnessApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB42FEA77E01054A28F0D211 /* libPods-FitnessApp.a */; };
+		B00596EB1ABFC5110042891E /* UIColor+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = B00596EA1ABFC5110042891E /* UIColor+Extra.m */; };
+		B00596F21ABFC7C70042891E /* Brandon_bld.otf in Resources */ = {isa = PBXBuildFile; fileRef = B00596EF1ABFC7C70042891E /* Brandon_bld.otf */; };
+		B00596F31ABFC7C70042891E /* Brandon_light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B00596F01ABFC7C70042891E /* Brandon_light.otf */; };
+		B00596F41ABFC7C70042891E /* Brandon_reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = B00596F11ABFC7C70042891E /* Brandon_reg.otf */; };
+		B00596F71ABFCD720042891E /* UIImage+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = B00596F61ABFCD720042891E /* UIImage+Extra.m */; };
+		B00596F91ABFCDC20042891E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00596F81ABFCDC20042891E /* QuartzCore.framework */; };
+		B00596FC1ABFCE450042891E /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = B00596FB1ABFCE450042891E /* UIView+Layout.m */; };
 		B017C5A81ABFB7D400AB0DCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5A71ABFB7D400AB0DCD /* main.m */; };
 		B017C5AB1ABFB7D400AB0DCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5AA1ABFB7D400AB0DCD /* AppDelegate.m */; };
-		B017C5AE1ABFB7D400AB0DCD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5AD1ABFB7D400AB0DCD /* ViewController.m */; };
-		B017C5B11ABFB7D400AB0DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017C5AF1ABFB7D400AB0DCD /* Main.storyboard */; };
 		B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B21ABFB7D400AB0DCD /* Images.xcassets */; };
 		B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */; };
 		B017C5C21ABFB7D400AB0DCD /* FitnessAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */; };
+		B0D57D241AC05854000BAAA2 /* Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D57D211AC05854000BAAA2 /* Animations.m */; };
+		B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D57D231AC05854000BAAA2 /* FCProgressView.m */; };
+		B0E08FDD1AC0FC5F00764149 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FD71AC0FC5F00764149 /* LoginViewController.m */; };
+		B0E08FDE1AC0FC5F00764149 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FD91AC0FC5F00764149 /* RegisterViewController.m */; };
+		B0E08FDF1AC0FC5F00764149 /* WHSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FDB1AC0FC5F00764149 /* WHSettingController.m */; };
+		B0E08FEB1AC0FC7A00764149 /* BaseLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FE21AC0FC7A00764149 /* BaseLoginView.m */; };
+		B0E08FEC1AC0FC7A00764149 /* GenderSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FE41AC0FC7A00764149 /* GenderSwitchView.m */; };
+		B0E08FED1AC0FC7A00764149 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FE61AC0FC7A00764149 /* LoginView.m */; };
+		B0E08FEE1AC0FC7A00764149 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FE81AC0FC7A00764149 /* RegisterView.m */; };
+		B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FEA1AC0FC7A00764149 /* WHSettingView.m */; };
+		B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FF11AC101E500764149 /* TransitionAnimation.m */; };
+		B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FF41AC10D1F00764149 /* LoginBaseController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +45,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB42FEA77E01054A28F0D211 /* libPods-FitnessApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitnessApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00596E91ABFC5110042891E /* UIColor+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extra.h"; sourceTree = "<group>"; };
+		B00596EA1ABFC5110042891E /* UIColor+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extra.m"; sourceTree = "<group>"; };
+		B00596EC1ABFC57B0042891E /* Fitness.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fitness.pch; sourceTree = "<group>"; };
+		B00596EF1ABFC7C70042891E /* Brandon_bld.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_bld.otf; sourceTree = "<group>"; };
+		B00596F01ABFC7C70042891E /* Brandon_light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_light.otf; sourceTree = "<group>"; };
+		B00596F11ABFC7C70042891E /* Brandon_reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_reg.otf; sourceTree = "<group>"; };
+		B00596F51ABFCD720042891E /* UIImage+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extra.h"; sourceTree = "<group>"; };
+		B00596F61ABFCD720042891E /* UIImage+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extra.m"; sourceTree = "<group>"; };
+		B00596F81ABFCDC20042891E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B00596FA1ABFCE450042891E /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		B00596FB1ABFCE450042891E /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		B017C5A21ABFB7D400AB0DCD /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B017C5A61ABFB7D400AB0DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017C5A71ABFB7D400AB0DCD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B017C5A91ABFB7D400AB0DCD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B017C5AA1ABFB7D400AB0DCD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B017C5AC1ABFB7D400AB0DCD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B017C5AD1ABFB7D400AB0DCD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B017C5B01ABFB7D400AB0DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B017C5B21ABFB7D400AB0DCD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B017C5B51ABFB7D400AB0DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B017C5BB1ABFB7D400AB0DCD /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B017C5C01ABFB7D400AB0DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitnessAppTests.m; sourceTree = "<group>"; };
+		B0D57D201AC05854000BAAA2 /* Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animations.h; sourceTree = "<group>"; };
+		B0D57D211AC05854000BAAA2 /* Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animations.m; sourceTree = "<group>"; };
+		B0D57D221AC05854000BAAA2 /* FCProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCProgressView.h; sourceTree = "<group>"; };
+		B0D57D231AC05854000BAAA2 /* FCProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCProgressView.m; sourceTree = "<group>"; };
+		B0E08FD61AC0FC5F00764149 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B0E08FD71AC0FC5F00764149 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B0E08FD81AC0FC5F00764149 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B0E08FD91AC0FC5F00764149 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B0E08FDA1AC0FC5F00764149 /* WHSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHSettingController.h; sourceTree = "<group>"; };
+		B0E08FDB1AC0FC5F00764149 /* WHSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHSettingController.m; sourceTree = "<group>"; };
+		B0E08FE11AC0FC7A00764149 /* BaseLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoginView.h; sourceTree = "<group>"; };
+		B0E08FE21AC0FC7A00764149 /* BaseLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoginView.m; sourceTree = "<group>"; };
+		B0E08FE31AC0FC7A00764149 /* GenderSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderSwitchView.h; sourceTree = "<group>"; };
+		B0E08FE41AC0FC7A00764149 /* GenderSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderSwitchView.m; sourceTree = "<group>"; };
+		B0E08FE51AC0FC7A00764149 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		B0E08FE61AC0FC7A00764149 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		B0E08FE71AC0FC7A00764149 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
+		B0E08FE81AC0FC7A00764149 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		B0E08FE91AC0FC7A00764149 /* WHSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHSettingView.h; sourceTree = "<group>"; };
+		B0E08FEA1AC0FC7A00764149 /* WHSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHSettingView.m; sourceTree = "<group>"; };
+		B0E08FF01AC101E500764149 /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
+		B0E08FF11AC101E500764149 /* TransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimation.m; sourceTree = "<group>"; };
+		B0E08FF31AC10D1F00764149 /* LoginBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginBaseController.h; sourceTree = "<group>"; };
+		B0E08FF41AC10D1F00764149 /* LoginBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginBaseController.m; sourceTree = "<group>"; };
+		C16E304FC91678B3388DCF00 /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
+		DBD42198FCE3192D0CF504A6 /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00596F91ABFCDC20042891E /* QuartzCore.framework in Frameworks */,
+				48397B941930B4C1A1438A14 /* libPods-FitnessApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +115,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B00596ED1ABFC7C70042891E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B00596EE1ABFC7C70042891E /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B00596EE1ABFC7C70042891E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B00596EF1ABFC7C70042891E /* Brandon_bld.otf */,
+				B00596F01ABFC7C70042891E /* Brandon_light.otf */,
+				B00596F11ABFC7C70042891E /* Brandon_reg.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		B017C5991ABFB7D400AB0DCD = {
 			isa = PBXGroup;
 			children = (
 				B017C5A41ABFB7D400AB0DCD /* FitnessApp */,
 				B017C5BE1ABFB7D400AB0DCD /* FitnessAppTests */,
 				B017C5A31ABFB7D400AB0DCD /* Products */,
+				F1BDFA89297E90D9473EB12E /* Pods */,
+				D92231822986F94A29C70DB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +156,9 @@
 		B017C5A41ABFB7D400AB0DCD /* FitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				B017C5CB1ABFBB7500AB0DCD /* Classes */,
 				B017C5A91ABFB7D400AB0DCD /* AppDelegate.h */,
 				B017C5AA1ABFB7D400AB0DCD /* AppDelegate.m */,
-				B017C5AC1ABFB7D400AB0DCD /* ViewController.h */,
-				B017C5AD1ABFB7D400AB0DCD /* ViewController.m */,
-				B017C5AF1ABFB7D400AB0DCD /* Main.storyboard */,
 				B017C5B21ABFB7D400AB0DCD /* Images.xcassets */,
 				B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */,
 				B017C5A51ABFB7D400AB0DCD /* Supporting Files */,
@@ -96,8 +169,10 @@
 		B017C5A51ABFB7D400AB0DCD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B00596ED1ABFC7C70042891E /* Resource */,
 				B017C5A61ABFB7D400AB0DCD /* Info.plist */,
 				B017C5A71ABFB7D400AB0DCD /* main.m */,
+				B00596EC1ABFC57B0042891E /* Fitness.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +194,125 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B017C5CB1ABFBB7500AB0DCD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B017C5CE1ABFBB7500AB0DCD /* Helper */,
+				B017C5CC1ABFBB7500AB0DCD /* Categries */,
+				B017C5CD1ABFBB7500AB0DCD /* Controllers */,
+				B017C5CF1ABFBB7500AB0DCD /* Models */,
+				B017C5D01ABFBB7500AB0DCD /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B017C5CC1ABFBB7500AB0DCD /* Categries */ = {
+			isa = PBXGroup;
+			children = (
+				B00596E91ABFC5110042891E /* UIColor+Extra.h */,
+				B00596EA1ABFC5110042891E /* UIColor+Extra.m */,
+				B00596F51ABFCD720042891E /* UIImage+Extra.h */,
+				B00596F61ABFCD720042891E /* UIImage+Extra.m */,
+				B00596FA1ABFCE450042891E /* UIView+Layout.h */,
+				B00596FB1ABFCE450042891E /* UIView+Layout.m */,
+			);
+			path = Categries;
+			sourceTree = "<group>";
+		};
+		B017C5CD1ABFBB7500AB0DCD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FD31AC0FC5F00764149 /* LoginControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B017C5CE1ABFBB7500AB0DCD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FF01AC101E500764149 /* TransitionAnimation.h */,
+				B0E08FF11AC101E500764149 /* TransitionAnimation.m */,
+				B0D57D1F1AC05854000BAAA2 /* FCProgressView */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B017C5CF1ABFBB7500AB0DCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B017C5D01ABFBB7500AB0DCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FE01AC0FC7A00764149 /* LoginViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0D57D1F1AC05854000BAAA2 /* FCProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				B0D57D201AC05854000BAAA2 /* Animations.h */,
+				B0D57D211AC05854000BAAA2 /* Animations.m */,
+				B0D57D221AC05854000BAAA2 /* FCProgressView.h */,
+				B0D57D231AC05854000BAAA2 /* FCProgressView.m */,
+			);
+			path = FCProgressView;
+			sourceTree = "<group>";
+		};
+		B0E08FD31AC0FC5F00764149 /* LoginControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FF31AC10D1F00764149 /* LoginBaseController.h */,
+				B0E08FF41AC10D1F00764149 /* LoginBaseController.m */,
+				B0E08FD61AC0FC5F00764149 /* LoginViewController.h */,
+				B0E08FD71AC0FC5F00764149 /* LoginViewController.m */,
+				B0E08FD81AC0FC5F00764149 /* RegisterViewController.h */,
+				B0E08FD91AC0FC5F00764149 /* RegisterViewController.m */,
+				B0E08FDA1AC0FC5F00764149 /* WHSettingController.h */,
+				B0E08FDB1AC0FC5F00764149 /* WHSettingController.m */,
+			);
+			path = LoginControllers;
+			sourceTree = "<group>";
+		};
+		B0E08FE01AC0FC7A00764149 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FE11AC0FC7A00764149 /* BaseLoginView.h */,
+				B0E08FE21AC0FC7A00764149 /* BaseLoginView.m */,
+				B0E08FE31AC0FC7A00764149 /* GenderSwitchView.h */,
+				B0E08FE41AC0FC7A00764149 /* GenderSwitchView.m */,
+				B0E08FE51AC0FC7A00764149 /* LoginView.h */,
+				B0E08FE61AC0FC7A00764149 /* LoginView.m */,
+				B0E08FE71AC0FC7A00764149 /* RegisterView.h */,
+				B0E08FE81AC0FC7A00764149 /* RegisterView.m */,
+				B0E08FE91AC0FC7A00764149 /* WHSettingView.h */,
+				B0E08FEA1AC0FC7A00764149 /* WHSettingView.m */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		D92231822986F94A29C70DB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B00596F81ABFCDC20042891E /* QuartzCore.framework */,
+				AB42FEA77E01054A28F0D211 /* libPods-FitnessApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1BDFA89297E90D9473EB12E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBD42198FCE3192D0CF504A6 /* Pods-FitnessApp.debug.xcconfig */,
+				C16E304FC91678B3388DCF00 /* Pods-FitnessApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B017C5C51ABFB7D400AB0DCD /* Build configuration list for PBXNativeTarget "FitnessApp" */;
 			buildPhases = (
+				DE1D5B935CB55D17E4220AE4 /* Check Pods Manifest.lock */,
 				B017C59E1ABFB7D400AB0DCD /* Sources */,
 				B017C59F1ABFB7D400AB0DCD /* Frameworks */,
 				B017C5A01ABFB7D400AB0DCD /* Resources */,
+				9A2070BC6C8A028B93BE0F19 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +395,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B017C5B11ABFB7D400AB0DCD /* Main.storyboard in Resources */,
+				B00596F41ABFC7C70042891E /* Brandon_reg.otf in Resources */,
 				B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */,
 				B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */,
+				B00596F21ABFC7C70042891E /* Brandon_bld.otf in Resources */,
+				B00596F31ABFC7C70042891E /* Brandon_light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +412,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A2070BC6C8A028B93BE0F19 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1D5B935CB55D17E4220AE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B017C59E1ABFB7D400AB0DCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B017C5AE1ABFB7D400AB0DCD /* ViewController.m in Sources */,
+				B0E08FEC1AC0FC7A00764149 /* GenderSwitchView.m in Sources */,
+				B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */,
+				B0D57D241AC05854000BAAA2 /* Animations.m in Sources */,
+				B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */,
+				B0E08FED1AC0FC7A00764149 /* LoginView.m in Sources */,
+				B0E08FEB1AC0FC7A00764149 /* BaseLoginView.m in Sources */,
+				B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */,
+				B0E08FDF1AC0FC5F00764149 /* WHSettingController.m in Sources */,
 				B017C5AB1ABFB7D400AB0DCD /* AppDelegate.m in Sources */,
 				B017C5A81ABFB7D400AB0DCD /* main.m in Sources */,
+				B0E08FDD1AC0FC5F00764149 /* LoginViewController.m in Sources */,
+				B00596F71ABFCD720042891E /* UIImage+Extra.m in Sources */,
+				B00596EB1ABFC5110042891E /* UIColor+Extra.m in Sources */,
+				B00596FC1ABFCE450042891E /* UIView+Layout.m in Sources */,
+				B0E08FDE1AC0FC5F00764149 /* RegisterViewController.m in Sources */,
+				B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */,
+				B0E08FEE1AC0FC7A00764149 /* RegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B017C5AF1ABFB7D400AB0DCD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B017C5B01ABFB7D400AB0DCD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,20 +578,28 @@
 		};
 		B017C5C61ABFB7D400AB0DCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBD42198FCE3192D0CF504A6 /* Pods-FitnessApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = FitnessApp/Fitness.pch;
 				INFOPLIST_FILE = FitnessApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		B017C5C71ABFB7D400AB0DCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C16E304FC91678B3388DCF00 /* Pods-FitnessApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = FitnessApp/Fitness.pch;
 				INFOPLIST_FILE = FitnessApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -412,6 +657,7 @@
 				B017C5C71ABFB7D400AB0DCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B017C5C81ABFB7D400AB0DCD /* Build configuration list for PBXNativeTarget "FitnessAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +666,7 @@
 				B017C5CA1ABFB7D400AB0DCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

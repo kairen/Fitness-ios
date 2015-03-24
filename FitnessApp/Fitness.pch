@@ -1,0 +1,17 @@
+//
+//  Fitness.pch
+//  FitnessApp
+//
+//  Created by KaiRen.Bai on 2015/3/23.
+//  Copyright (c) 2015年 KaiRen.Bai. All rights reserved.
+//
+
+#ifndef FitnessApp_Fitness_pch
+#define FitnessApp_Fitness_pch
+
+#import "UIColor+Extra.h"
+#import "UIImage+Extra.h"
+#import "UIView+Layout.h"
+
+
+#endif
