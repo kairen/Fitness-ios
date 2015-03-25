@@ -46,7 +46,7 @@
     return self.frame.size;
 }
 
-- (KeyboardDevice) getKeyboardDevice {
+- (KeyboardDevice)getKeyboardDevice {
     CGRect frame = [UIScreen mainScreen].bounds;
     if(CGRectGetHeight(frame) <= 568) {
         return KeyboardiPhone5;

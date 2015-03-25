@@ -12,7 +12,7 @@
 
 @implementation UIImage (Extra)
 
-+ (UIImage*) fitImage:(NSString *)imageName size:(CGSize)newSize {
++ (UIImage *) fitImage:(NSString *)imageName size:(CGSize)newSize {
     UIImage *image = [UIImage imageNamed:imageName];
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 1.5);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -22,14 +22,14 @@
 }
 
 
-+ (UIImage*)loadFileImageName:(NSString*)name {
++ (UIImage *)loadFileImageName:(NSString *)name {
     return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:nil]];
 }
 
 - (UIImage *)boxblurImageWithBlur:(CGFloat)blur {
     
     NSData *imageData = UIImageJPEGRepresentation(self, 1); // convert to jpeg
-    UIImage* destImage = [UIImage imageWithData:imageData];
+    UIImage *destImage = [UIImage imageWithData:imageData];
     
     if (blur < 0.f || blur > 1.f) {
         blur = 0.5f;

@@ -8,8 +8,9 @@
 
 #import "WHSettingController.h"
 #import "WHSettingView.h"
+#import "HTTPClient.h"
 
-@interface WHSettingController ()
+@interface WHSettingController () <HTTPClientDelegate>
 @property (nonatomic, strong) WHSettingView *settingView;
 @end
 
@@ -18,5 +19,24 @@
 - (void)loadView {
     self.settingView = [[WHSettingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.view = self.settingView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.settingView.nextButton addTarget:self action:@selector(postWeightAndHeightAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)postWeightAndHeightAction:(id)sender {
+    CGFloat weight = [self.settingView.weightField.text floatValue];
+    CGFloat height = [self.settingView.heightField.text floatValue];
+    if(weight > 30 && height > 140) {
+        [HTTPClient shareInstance].delegate = self;
+        
+    }
+}
+
+#pragma mark - HTTP Request Body Meteric Result
+- (void)httpRequestUserBodyResult:(id)resultObject {
+    NSLog(@"%@", resultObject);
 }
 @end

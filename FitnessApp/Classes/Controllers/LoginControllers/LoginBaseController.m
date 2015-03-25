@@ -9,6 +9,8 @@
 #import "LoginBaseController.h"
 #import "TransitionAnimation.h"
 
+static NSString * const LoginAlertViewTitle = @"Account Info";
+
 @implementation LoginBaseController
 
 - (void)viewDidLoad {
@@ -21,6 +23,11 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:LoginAlertViewTitle message:message delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
+    [messageAlert show];
 }
 
 #pragma mark - View Controller Animation Delegate

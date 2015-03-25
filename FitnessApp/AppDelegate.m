@@ -36,13 +36,12 @@ NSString * const DB_FITNESS = @"fitness.db";
     //    [FBAppEvents activateApp];
 }
 
-
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [FBSession.activeSession handleOpenURL:url];
 }
 
 #pragma mark - Facebook Login Methods
--(void) sessionStateChanged:(FBSession*)session state:(FBSessionState) state Error:(NSError*)error {
+-(void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state Error:(NSError *)error {
     if (!error && state == FBSessionStateOpen) {
         [self userLoggedIn];
         return;
@@ -57,12 +56,12 @@ NSString * const DB_FITNESS = @"fitness.db";
     }
 }
 
--(void) userLoggedIn {
+-(void)userLoggedIn {
     NSLog(@"user Loggin");
     self.FBIsLogin = YES;
 }
 
--(void) userLoggedOut {
+-(void)userLoggedOut {
     NSLog(@"user Logged out");
     self.FBIsLogin = NO;
 }

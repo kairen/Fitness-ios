@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+
 @interface FitnessAppTests : XCTestCase
 
 @end
@@ -27,7 +28,7 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    XCTAssert(NO, @"Pass");
 }
 
 - (void)testPerformanceExample {

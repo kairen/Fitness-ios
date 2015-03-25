@@ -10,11 +10,11 @@
 
 @interface UIColor (Extra)
 
-+ (UIColor*)colorWithIntegerRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpah;
++ (UIColor *)colorWithIntegerRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpah;
 + (UIColor *)colorWithRGBHex:(NSString *)hex alpha:(CGFloat)alpah;
 
-+ (UIColor*)boldYellowColor;
-+ (UIColor*)progressBackgroundColor;
-+ (NSArray*)gradientBlueColors;
-+ (NSArray*)gradientOrangeColors;
++ (UIColor *)boldYellowColor;
++ (UIColor *)progressBackgroundColor;
++ (NSArray *)gradientBlueColors;
++ (NSArray *)gradientOrangeColors;
 @end

@@ -10,8 +10,8 @@
 
 @interface BaseLoginView : UIView <UITextFieldDelegate>
 
-- (void)configureTextField:(UITextField *)textField  placeHolder:(NSString*)hoderString leftImage:(NSString *)imageName;
-- (void)configureButton:(UIButton*)button title:(NSString*) title fillCollor:(BOOL)fill;
+- (void)configureTextField:(UITextField *)textField  placeHolder:(NSString *)hoderString leftImage:(NSString *)imageName;
+- (void)configureButton:(UIButton *)button title:(NSString *) title fillCollor:(BOOL)fill;
 
 @property (nonatomic, strong) UIImageView *logoImage;
 @property(nonatomic) BOOL showLogo;

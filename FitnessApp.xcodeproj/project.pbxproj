@@ -20,6 +20,9 @@
 		B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B21ABFB7D400AB0DCD /* Images.xcassets */; };
 		B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */; };
 		B017C5C21ABFB7D400AB0DCD /* FitnessAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */; };
+		B04D591F1AC2C0E6002067F6 /* HTTPIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */; };
+		B04D59221AC2C58F002067F6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D59211AC2C58F002067F6 /* User.m */; };
+		B06E1F601AC1C7E400DC5817 /* HTTPStatuCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B06E1F5F1AC1C7E400DC5817 /* HTTPStatuCode.m */; };
 		B0D57D241AC05854000BAAA2 /* Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D57D211AC05854000BAAA2 /* Animations.m */; };
 		B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D57D231AC05854000BAAA2 /* FCProgressView.m */; };
 		B0E08FDD1AC0FC5F00764149 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FD71AC0FC5F00764149 /* LoginViewController.m */; };
@@ -32,6 +35,8 @@
 		B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FEA1AC0FC7A00764149 /* WHSettingView.m */; };
 		B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FF11AC101E500764149 /* TransitionAnimation.m */; };
 		B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FF41AC10D1F00764149 /* LoginBaseController.m */; };
+		B0E08FFC1AC133B000764149 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FFB1AC133B000764149 /* HTTPClient.m */; };
+		B0E08FFF1AC1535D00764149 /* HTTPIncludes.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08FFE1AC1535D00764149 /* HTTPIncludes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,12 @@
 		B017C5BB1ABFB7D400AB0DCD /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B017C5C01ABFB7D400AB0DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitnessAppTests.m; sourceTree = "<group>"; };
+		B04D591D1AC2C0E6002067F6 /* HTTPIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPIndicator.h; sourceTree = "<group>"; };
+		B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPIndicator.m; sourceTree = "<group>"; };
+		B04D59201AC2C58F002067F6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B04D59211AC2C58F002067F6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B06E1F5E1AC1C7E400DC5817 /* HTTPStatuCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPStatuCode.h; sourceTree = "<group>"; };
+		B06E1F5F1AC1C7E400DC5817 /* HTTPStatuCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPStatuCode.m; sourceTree = "<group>"; };
 		B0D57D201AC05854000BAAA2 /* Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animations.h; sourceTree = "<group>"; };
 		B0D57D211AC05854000BAAA2 /* Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animations.m; sourceTree = "<group>"; };
 		B0D57D221AC05854000BAAA2 /* FCProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCProgressView.h; sourceTree = "<group>"; };
@@ -91,6 +102,10 @@
 		B0E08FF11AC101E500764149 /* TransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimation.m; sourceTree = "<group>"; };
 		B0E08FF31AC10D1F00764149 /* LoginBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginBaseController.h; sourceTree = "<group>"; };
 		B0E08FF41AC10D1F00764149 /* LoginBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginBaseController.m; sourceTree = "<group>"; };
+		B0E08FFA1AC133B000764149 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		B0E08FFB1AC133B000764149 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		B0E08FFD1AC1535D00764149 /* HTTPIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPIncludes.h; sourceTree = "<group>"; };
+		B0E08FFE1AC1535D00764149 /* HTTPIncludes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPIncludes.m; sourceTree = "<group>"; };
 		C16E304FC91678B3388DCF00 /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
 		DBD42198FCE3192D0CF504A6 /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +212,7 @@
 		B017C5CB1ABFBB7500AB0DCD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B0E08FF91AC133B000764149 /* Networking */,
 				B017C5CE1ABFBB7500AB0DCD /* Helper */,
 				B017C5CC1ABFBB7500AB0DCD /* Categries */,
 				B017C5CD1ABFBB7500AB0DCD /* Controllers */,
@@ -240,6 +256,8 @@
 		B017C5CF1ABFBB7500AB0DCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B04D59201AC2C58F002067F6 /* User.h */,
+				B04D59211AC2C58F002067F6 /* User.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +311,21 @@
 				B0E08FEA1AC0FC7A00764149 /* WHSettingView.m */,
 			);
 			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		B0E08FF91AC133B000764149 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B0E08FFA1AC133B000764149 /* HTTPClient.h */,
+				B0E08FFB1AC133B000764149 /* HTTPClient.m */,
+				B0E08FFD1AC1535D00764149 /* HTTPIncludes.h */,
+				B0E08FFE1AC1535D00764149 /* HTTPIncludes.m */,
+				B06E1F5E1AC1C7E400DC5817 /* HTTPStatuCode.h */,
+				B06E1F5F1AC1C7E400DC5817 /* HTTPStatuCode.m */,
+				B04D591D1AC2C0E6002067F6 /* HTTPIndicator.h */,
+				B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D92231822986F94A29C70DB0 /* Frameworks */ = {
@@ -451,12 +484,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E08FEC1AC0FC7A00764149 /* GenderSwitchView.m in Sources */,
+				B04D591F1AC2C0E6002067F6 /* HTTPIndicator.m in Sources */,
 				B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */,
+				B0E08FFC1AC133B000764149 /* HTTPClient.m in Sources */,
 				B0D57D241AC05854000BAAA2 /* Animations.m in Sources */,
 				B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */,
+				B04D59221AC2C58F002067F6 /* User.m in Sources */,
 				B0E08FED1AC0FC7A00764149 /* LoginView.m in Sources */,
 				B0E08FEB1AC0FC7A00764149 /* BaseLoginView.m in Sources */,
 				B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */,
+				B06E1F601AC1C7E400DC5817 /* HTTPStatuCode.m in Sources */,
 				B0E08FDF1AC0FC5F00764149 /* WHSettingController.m in Sources */,
 				B017C5AB1ABFB7D400AB0DCD /* AppDelegate.m in Sources */,
 				B017C5A81ABFB7D400AB0DCD /* main.m in Sources */,
@@ -467,6 +504,7 @@
 				B0E08FDE1AC0FC5F00764149 /* RegisterViewController.m in Sources */,
 				B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */,
 				B0E08FEE1AC0FC7A00764149 /* RegisterView.m in Sources */,
+				B0E08FFF1AC1535D00764149 /* HTTPIncludes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

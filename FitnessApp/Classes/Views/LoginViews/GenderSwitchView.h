@@ -18,12 +18,12 @@ typedef NS_ENUM(NSUInteger, GenderType) {
 @interface GenderSwitchView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame
-                    leftImage:(NSString*)leftImage
-            leftUnselectImage:(NSString*)leftUnselect
-                   rightImage:(NSString*)rightImage
-           rightUnselectImage:(NSString*)rightUnselect;
+                    leftImage:(NSString *)leftImage
+            leftUnselectImage:(NSString *)leftUnselect
+                   rightImage:(NSString *)rightImage
+           rightUnselectImage:(NSString *)rightUnselect;
 
-- (void)setLeftTitle:(NSString*)leftTitle rightTitle:(NSString*)rightTitle;
+- (void)setLeftTitle:(NSString *)leftTitle rightTitle:(NSString *)rightTitle;
 
 @property (nonatomic, weak) id <GenderSwitchDelegate> delegate;
 

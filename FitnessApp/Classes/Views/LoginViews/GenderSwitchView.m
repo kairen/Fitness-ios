@@ -43,7 +43,7 @@
     return self;
 }
 
-- (void)configureButton:(UIButton*)button selectImage:(NSString*)selectImage unselectImage:(NSString*)unselectImage {
+- (void)configureButton:(UIButton *)button selectImage:(NSString *)selectImage unselectImage:(NSString *)unselectImage {
     button.tintColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont systemFontOfSize:18];
     button.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -61,7 +61,7 @@
     [self.rightButton setTitle:rightTitle forState:UIControlStateNormal];
 }
 
-- (void)buttonAction:(UIButton*)button {
+- (void)buttonAction:(UIButton *)button {
     typeof(self) __weak weakSelf = self;
     [UIView animateWithDuration:0.3 animations:^{
         weakSelf.leftButton.alpha = weakSelf.rightButton.alpha = 0.5;

@@ -10,4 +10,6 @@
 
 @interface LoginBaseController : UIViewController <UIViewControllerTransitioningDelegate>
 
+- (void)showAlertWithMessage:(NSString *)message;
+
 @end

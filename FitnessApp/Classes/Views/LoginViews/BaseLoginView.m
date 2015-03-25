@@ -33,7 +33,7 @@
     self.logoImage.hidden = !showLogo;
 }
 
-- (void)configureTextField:(UITextField *)textField  placeHolder:(NSString*)hoderString leftImage:(NSString *)imageName {
+- (void)configureTextField:(UITextField *)textField  placeHolder:(NSString *)hoderString leftImage:(NSString *)imageName {
     textField.textColor = [UIColor colorWithRGBHex:@"#00A0E9" alpha:1.0];
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:hoderString attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
@@ -47,7 +47,7 @@
     [self addSubview:textField];
 }
 
-- (void)configureButton:(UIButton*)button title:(NSString*) title fillCollor:(BOOL)fill {
+- (void)configureButton:(UIButton *)button title:(NSString *) title fillCollor:(BOOL)fill {
     button.layer.masksToBounds = YES;
     button.layer.cornerRadius = 5;
     if(fill) {
