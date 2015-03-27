@@ -24,7 +24,7 @@ NSString * HTTPServerURLString = @"http://wondercore.herokuapp.com";
 /**
  *  User Login and Register
  */
-NSString * HTTPRegisterWithUserInfoURLString = @"/api/user/create"; // post
+NSString * HTTPRegisterWithUserInfoURLString = @"/api/user"; // post
 NSString * HTTPLoginWithUserInfoURLString = @"/api/user/login"; // post
 NSString * HTTPLoginWithFacebookURLString = @"/api/user/auth"; // post
 NSString * HTTPLogoutAccountURLString = @"/api/user/logout";// post

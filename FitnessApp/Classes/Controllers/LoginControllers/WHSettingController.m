@@ -32,6 +32,8 @@
     if(weight > 30 && height > 140) {
         [HTTPClient shareInstance].delegate = self;
         [[HTTPClient shareInstance] postUserBodyWeight:weight andHeight:height];
+    } else {
+        [self showAlertWithMessage:@"Weight and Height incorrect."];
     }
 }
 

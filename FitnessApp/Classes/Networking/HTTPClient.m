@@ -28,6 +28,7 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
 - (instancetype)initWithBaseURL:(NSURL *)url {
     self = [super initWithBaseURL:url];
     if (self) {
+        NSLog(@"%@",url);
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.requestSerializer.timeoutInterval = HTTPRequestTimeout;
