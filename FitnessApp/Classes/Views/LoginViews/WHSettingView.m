@@ -109,4 +109,9 @@
     unitLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     [self addSubview:unitLabel];
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.weightField resignFirstResponder];
+    [self.heightField resignFirstResponder];
+}
 @end

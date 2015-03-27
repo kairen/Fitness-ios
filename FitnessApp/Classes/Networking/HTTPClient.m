@@ -8,19 +8,8 @@
 
 #import "HTTPClient.h"
 #import "HTTPStatuCode.h"
+#import "HTTPParameterKeys.h"
 #import "HTTPIndicator.h"
-
-static NSString * const FBUserNameKey = @"userName";
-static NSString * const FBPlatformKey = @"platformType";
-static NSString * const FBTokenKey = @"token";
-
-static NSString * const AccountUserNameKey = @"userName";
-static NSString * const AccountPasswdKey = @"password";
-
-static NSString * const BodyWeightKey = @"weight";
-static NSString * const BodyHeightKey = @"height";
-
-static NSString * const HTTPResultKey = @"result";
 
 static NSTimeInterval const HTTPRequestTimeout = 5;
 static NSString * const HTTPAlertViewTitle = @"HTTP Status";
@@ -51,22 +40,24 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
     [messageAlert show];
 }
 
-- (BOOL)checkFailedWithResponse:(id)resposeObject {
-    HTTPErrorCode statusCode = [resposeObject[HTTPResultKey] integerValue];
-    NSError *error = [HTTPStatuCode errorWithStatusCode:statusCode];
-    [self showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
-    return !error;
+- (BOOL)checkSuccessWithFormat:(HTTPErrorFormats)format response:(id)response {
+    NSInteger statusCode = [response[HTTPResultKey] integerValue];
+    NSError *error = [HTTPStatuCode errorWithFormat:format statusCode:statusCode];
+    if(error) {
+        [self showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
+    }
+    return (error == nil);
 }
 
 /**
  *  Request Factory Method
  *
  *  @param url        Is request url.
- *  @param method     Is HTTP GET/POST.
+ *  @param method     Is HTTP GET/POST/PUT/DELETE.
  *  @param parameters Is user infos.
  *  @param success    Is success call func block.
  */
-- (void)requestURL:(NSString *)url method:(HTTPRequestMethod)method parameters:(id)parameters success:(HTTPRequestSuccess)success {
+- (void)requestURL:(NSString *)url method:(HTTPRequestMethod)method parameters:(id)parameters success:(HTTPSuccessBlock)success {
     
     typeof(self) __weak weakSelf = self;
     switch (method) {
@@ -80,11 +71,21 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
                 [weakSelf showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
             }];
         } break;
+        case HTTPRequestPUT: {
+            [self PUT:url parameters:parameters success:success failure:^(NSURLSessionDataTask *task, NSError *error) {
+                [weakSelf showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
+            }];
+        } break;
+        case HTTPRequestDelete: {
+            [self DELETE:url parameters:parameters success:success failure:^(NSURLSessionDataTask *task, NSError *error) {
+                [weakSelf showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
+            }];
+        } break;
     }
 }
 
 /**
- *  Login With Facebook
+ *  Login with facebook
  *
  *  @param token    Is facebook access token.
  *  @param userName Is facebook user name.
@@ -96,25 +97,9 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
                                FBTokenKey:token};
     
     [self requestURL:HTTPLoginWithFacebookURLString method:HTTPRequestPOST parameters:userInfo success:^(NSURLSessionDataTask *task, id response) {
-        BOOL failed = [weakSelf checkFailedWithResponse:response];
-        if([weakSelf.delegate respondsToSelector:@selector(httpRequestLoginResult:)] && !failed) {
-            [weakSelf.delegate httpRequestRegisterResult:response];
-        }
-    }];
-}
-
-/**
- *  Register User
- *
- *  @param userInfo Is a post info.
- */
-- (void)registerWithUserInfo:(NSDictionary *)userInfo {
-    typeof(self) __weak weakSelf = self;
-    
-    [self requestURL:HTTPRegisterWithUserInfoURLString method:HTTPRequestGET parameters:userInfo success:^(NSURLSessionDataTask *task, id response) {
-         BOOL failed = [weakSelf checkFailedWithResponse:response];
-        if([weakSelf.delegate respondsToSelector:@selector(httpRequestRegisterResult:)] && !failed) {
-            [weakSelf.delegate httpRequestRegisterResult:response];
+        BOOL succes = [weakSelf checkSuccessWithFormat:HTTPErrorFormatFacebook response:response];
+        if([weakSelf.delegate respondsToSelector:@selector(httpRequestLoginResult:)] && succes) {
+            [weakSelf.delegate httpRequestLoginResult:response];
         }
     }];
 }
@@ -131,18 +116,34 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
                                AccountPasswdKey:passwd};
     
     [self requestURL:HTTPLoginWithUserInfoURLString method:HTTPRequestPOST parameters:userInfo success:^(NSURLSessionDataTask *task, id response) {
-        BOOL failed = [weakSelf checkFailedWithResponse:response];
-        if([weakSelf.delegate respondsToSelector:@selector(httpRequestLoginResult:)] && !failed) {
+        BOOL succes = [weakSelf checkSuccessWithFormat:HTTPErrorFormatLogin response:response];
+        if([weakSelf.delegate respondsToSelector:@selector(httpRequestLoginResult:)] && succes) {
+            [weakSelf.delegate httpRequestLoginResult:response];
+        }
+    }];
+}
+
+/**
+ *  Register user
+ *
+ *  @param userInfo Is a post info.
+ */
+- (void)registerWithUserInfo:(NSDictionary *)userInfo {
+    typeof(self) __weak weakSelf = self;
+    
+    [self requestURL:HTTPRegisterWithUserInfoURLString method:HTTPRequestGET parameters:userInfo success:^(NSURLSessionDataTask *task, id response) {
+         BOOL succes = [weakSelf checkSuccessWithFormat:HTTPErrorFormatRegister response:response];
+        if([weakSelf.delegate respondsToSelector:@selector(httpRequestRegisterResult:)] && succes) {
             [weakSelf.delegate httpRequestRegisterResult:response];
         }
     }];
 }
 
 /**
- *  Post Weight and Height
+ *  Post height and height
  *
- *  @param weight Is a user weight
- *  @param height Is a user Height
+ *  @param weight Is a user weight.
+ *  @param height Is a user Height.
  */
 - (void)postUserBodyWeight:(CGFloat)weight andHeight:(CGFloat)height {
     typeof(self) __weak weakSelf = self;
@@ -150,10 +151,41 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
                                BodyHeightKey:@(height)};
     
     [self requestURL:HTTPPostBodyMetricURLString method:HTTPRequestPOST parameters:bodyInfo success:^(NSURLSessionDataTask *task, id response) {
-        BOOL failed = [weakSelf checkFailedWithResponse:response];
-        if([weakSelf.delegate respondsToSelector:@selector(httpRequestUserBodyResult:)] && !failed) {
+        BOOL succes = [weakSelf checkSuccessWithFormat:0 response:response];
+        if([weakSelf.delegate respondsToSelector:@selector(httpRequestUserBodyResult:)] && succes) {
             [weakSelf.delegate httpRequestUserBodyResult:response];
         }
+    }];
+}
+
+/**
+ *  Get user body meteric with unix timestamp
+ *
+ *  @param greaterTime Is a greater than or qual timestamp.
+ *  @param lessTime    Is a less than timestamp.
+ */
+- (void)getUserBodyMetericWithGreaterThanTimestamp:(NSTimeInterval)greaterTime
+                              LessThanTimestamp:(NSTimeInterval)lessTime {
+    typeof(self) __weak weakSelf = self;
+    [self requestURL:HTTPGetBodyMetricURLString method:HTTPRequestPOST parameters:nil success:^(NSURLSessionDataTask *task, id response) {
+        BOOL succes = [weakSelf checkSuccessWithFormat:0 response:response];
+        if([weakSelf.delegate respondsToSelector:@selector(httpRequestUserBodyResult:)] && succes) {
+            [weakSelf.delegate httpRequestUserBodyResult:response];
+        }
+    }];
+}
+
+
+/**
+ *  Create session with info
+ *
+ *  @param sessionInfo Is a session info.
+ */
+- (void)createSessionWithSessionInfo:(NSDictionary *)sessionInfo {
+    typeof(self) __weak weakSelf = self;
+    [self requestURL:HTTPSessionCreateURLString method:HTTPRequestPOST parameters:sessionInfo success:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succes = [weakSelf checkSuccessWithFormat:0 response:responseObject];
+        
     }];
 }
 

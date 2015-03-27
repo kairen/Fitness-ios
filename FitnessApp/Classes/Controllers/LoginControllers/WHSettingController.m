@@ -31,7 +31,7 @@
     CGFloat height = [self.settingView.heightField.text floatValue];
     if(weight > 30 && height > 140) {
         [HTTPClient shareInstance].delegate = self;
-        
+        [[HTTPClient shareInstance] postUserBodyWeight:weight andHeight:height];
     }
 }
 

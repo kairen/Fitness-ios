@@ -30,7 +30,6 @@
         self.leftButton.titleEdgeInsets = UIEdgeInsetsMake(0, - self.width * 0.225, 0, 0);
         self.leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, self.width * 0.1, 0, self.width * 0.25);
         self.leftButton.tag = 0;
-        self.leftButton.alpha = 1.0;
         
         self.rightButton = [UIButton buttonWithType:UIButtonTypeSystem];
         self.rightButton.frame = CGRectMake(self.width * 0.5, self.leftButton.minY, self.width * 0.5, self.width * 0.15);
@@ -38,12 +37,12 @@
         self.rightButton.titleEdgeInsets = UIEdgeInsetsMake(0, - self.width * 0.325, 0, self.width * 0.05);
         self.rightButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, self.width * 0.35);
         self.rightButton.tag = 1;
-        self.rightButton.alpha = 0.5;
     }
     return self;
 }
 
 - (void)configureButton:(UIButton *)button selectImage:(NSString *)selectImage unselectImage:(NSString *)unselectImage {
+    button.alpha = 0.5;
     button.tintColor = [UIColor whiteColor];
     button.titleLabel.font = [UIFont systemFontOfSize:18];
     button.titleLabel.adjustsFontSizeToFitWidth = YES;

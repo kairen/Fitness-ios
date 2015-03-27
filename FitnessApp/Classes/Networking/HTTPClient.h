@@ -9,22 +9,32 @@
 #import "AFNetworking.h"
 #import "HTTPIncludes.h"
 
+
+
 typedef NS_ENUM(NSInteger, HTTPRequestMethod) {
     HTTPRequestGET = 0,
-    HTTPRequestPOST
+    HTTPRequestPOST,
+    HTTPRequestPUT,
+    HTTPRequestDelete
 };
 
-typedef void(^HTTPRequestSuccess)(NSURLSessionDataTask *task, id responseObject);
+typedef void(^HTTPSuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 
 @protocol HTTPClientDelegate;
 
 @interface HTTPClient : AFHTTPSessionManager
 
 + (HTTPClient *)shareInstance;
+
 - (void)registerWithUserInfo:(NSDictionary *)userInfo;
 - (void)loginWithUserName:(NSString *)userName passwd:(NSString *)passwd;
 - (void)loginFacebookWithToken:(NSString *)token userName:(NSString *)userName;
+
 - (void)postUserBodyWeight:(CGFloat)weight andHeight:(CGFloat)height;
+- (void)getUserBodyMetericWithGreaterThanTimestamp:(NSTimeInterval)greaterTime
+                                 LessThanTimestamp:(NSTimeInterval)lessTime;
+
+- (void)createSessionWithSessionInfo:(NSDictionary *)sessionInfo;
 
 @property (nonatomic, weak) id<HTTPClientDelegate> delegate;
 @end

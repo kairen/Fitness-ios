@@ -10,10 +10,12 @@
 #import "RegisterView.h"
 #import "GenderSwitchView.h"
 #import "HTTPClient.h"
+#import "HTTPParameterKeys.h"
 
 @interface RegisterViewController () <GenderSwitchDelegate, HTTPClientDelegate>
 
 @property (nonatomic, strong) RegisterView *registerView;
+@property (nonatomic) NSInteger genderIndex;
 @end
 
 @implementation RegisterViewController
@@ -26,7 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.registerView.backButton addTarget:self action:@selector(backLoginViewAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.registerView.submitButton addTarget:self action:@selector(registerAccountAction:) forControlEvents:UIControlEventTouchUpInside];
     self.registerView.genderSwitch.delegate = self;
+    self.genderIndex = -1;
 }
 
 - (void)registerAccountAction:(id)sender {
@@ -34,15 +38,15 @@
     NSString *userName = self.registerView.userNameField.text;
     NSString *passwd = self.registerView.passwdField.text;
     NSString *checkPasswd = self.registerView.checkPasswdField.text;
-    
+    typeof(self) __weak weakSelf = self;
     
     if(email.length > 0 && userName.length > 0 && passwd.length > 0 && checkPasswd.length > 0) {
         if([passwd isEqualToString:checkPasswd]) {
             [HTTPClient shareInstance].delegate = self;
-            NSDictionary *userInfo = @{@"email":email,
-                                       @"username":userName,
-                                       @"password":passwd,
-                                       @"gender":@(-1)};
+            NSDictionary *userInfo = @{AccountEmailKey:email,
+                                       AccountUserNameKey:userName,
+                                       AccountPasswdKey:passwd,
+                                       AccountGenderKey:@(weakSelf.genderIndex)};
             [[HTTPClient shareInstance] registerWithUserInfo:userInfo];
         } else {
             [self showAlertWithMessage:@"Password and Confirm password not correct"];
@@ -54,9 +58,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)httpRequestRegisterResult:(id)resultObject {
+    NSLog(@"%@", resultObject);
+}
+
 #pragma mark - GenderSwitchDelegate
 - (void)genderSwitchView:(GenderSwitchView *)switchView didSelectAtItem:(GenderType)genderType {
-    NSLog(@"%@", (genderType == GenderFemale) ? @"女" : @"男");
+    self.genderIndex = genderType;
 }
 
 @end

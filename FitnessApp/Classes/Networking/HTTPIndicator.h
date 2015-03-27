@@ -10,4 +10,8 @@
 
 @interface HTTPIndicator : UIView
 
++ (HTTPIndicator *)indicator;
+
+- (void)startActivity;
+- (void)stopActivity;
 @end

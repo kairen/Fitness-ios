@@ -10,4 +10,19 @@
 
 @implementation User
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.userID =  @(-1);
+        self.email = @"null";
+        self.userName = @"null";
+        self.nickName = @"null";
+        self.gender = @(UserGenderNone);
+        self.platform = @"null";
+        self.platformID = @"null";
+        self.token = @"null";
+    }
+    return self;
+}
+
 @end

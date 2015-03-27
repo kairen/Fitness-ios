@@ -8,26 +8,116 @@
 
 #import "HTTPStatuCode.h"
 
-NSString * HTTPRequestDomain = @"FitnessNetError";
+NSString * HTTPRequestDomain = @"FitnessNetworkError";
 
 @implementation HTTPStatuCode
 
-+ (NSError *)errorWithStatusCode:(HTTPErrorCode)errorCode {
-    switch (errorCode) {
-        case HTTPServerError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey:@"Server error."}];
++ (NSError *)errorWithFormat:(HTTPErrorFormats)format statusCode:(NSInteger)code {
+    switch (code) {
+        case HTTPUniversalServerError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"Server error."}];
         } break;
-        case HTTPNotAuthError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey:@"Not authenticated to perform the action."}];
+        case HTTPUniversalNotAuthError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"Not authenticated to perform the action."}];
         } break;
-        case HTTPUserInfoEmptyError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey:@"Email or Password is empty."}];
-        } break;
-        case HTTPUserInfoIncorrectError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey:@"Incorrect email or password."}];
-        } break;
+        default: {
+            /**
+             *   Mapping some error
+             */
+            switch (format) {
+                case HTTPErrorFormatFacebook: {
+                    return [HTTPStatuCode facebookLoginErrorWithCode:code];
+                } break;
+                case HTTPErrorFormatLogin: {
+                    return [HTTPStatuCode accountLoginErrorWithCode:code];
+                } break;
+                case HTTPErrorFormatRegister: {
+                    return [HTTPStatuCode accountRegisterErrorWithCode:code];
+                } break;
+                case HTTPErrorFormatChallenge: {
+                    return [HTTPStatuCode accountRegisterErrorWithCode:code];
+                } break;
+            }
+        }
     }
     return  nil;
 }
 
+/**
+ *  Facebook Login Error
+ *
+ *  @param code Is a status code.
+ *
+ *  @return mapping error for status code.
+ */
++ (NSError *)facebookLoginErrorWithCode:(HTTPFacebookError)code {
+    switch (code) {
+        case HTTPFacebookTokenError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid token."}];
+        } break;
+        case HTTPFacebookIDError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid facebook id."}];
+        } break;
+        case HTTPFacebookUserNameError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid username."}];
+        } break;
+    }
+    return nil;
+}
+
+/**
+ *  Account Login Error
+ *
+ *  @param code Is a status code.
+ *
+ *  @return mapping error for status code.
+ */
++ (NSError *)accountLoginErrorWithCode:(HTTPLoginError)code  {
+    switch (code) {
+        case HTTPLoginEmptyError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"email or password is empty."}];
+        } break;
+        case HTTPLoginIncorrectError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"incorrect email or password."}];
+        } break;
+    }
+    return nil;
+}
+
+/**
+ *  Register Error
+ *
+ *  @param code  Is a status code.
+ *
+ *  @return mapping error for status code.
+ */
++ (NSError *)accountRegisterErrorWithCode:(HTTPRegisterError)code  {
+    switch (code) {
+        case HTTPRegisterEmptyError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"email or password is empty."}];
+        } break;
+        case HTTPRegisterPasswdError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"password must be > 4 <= 16."}];
+        } break;
+        case HTTPRegisterAlreadError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"user email already registered."}];
+        } break;
+    }
+    return nil;
+}
+
++ (NSError *)createChallengeErrorWithCode:(HTTPChallengeError)code  {
+    switch (code) {
+        case HTTPChallengeNotAfterStartTimeError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"endTime is not after startTime."}];
+        } break;
+        case HTTPChallengeEndTimePastError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"endTime is in the past."}];
+        } break;
+        case HTTPChallengeGoalValueError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"goal value must be greater than 0."}];
+        } break;
+    }
+    return nil;
+}
 @end

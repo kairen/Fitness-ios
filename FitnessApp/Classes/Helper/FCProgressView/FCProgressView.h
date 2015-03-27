@@ -27,10 +27,10 @@ typedef NS_ENUM(NSInteger, SquareType) {
 
 @interface FCProgressView : UIView
 
-- (instancetype) initWithFrame:(CGRect)frame type:(ProgressViewType)progressType backgroundColor:(UIColor*)color;
-- (void) refresh;
-- (void) setProgressColor:(UIColor*)color;
-- (void) setProgressDuration:(float)duration;
+- (instancetype)initWithFrame:(CGRect)frame type:(ProgressViewType)progressType backgroundColor:(UIColor*)color;
+- (void)refresh;
+- (void)setProgressColor:(UIColor*)color;
+- (void)setProgressDuration:(float)duration;
 
 @property (nonatomic, weak) id <FCProgressDelegate> delegate;
 
@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, SquareType) {
 @property (nonatomic) CGFloat progressValue;
 @end
 
-@protocol FCProgressDelegate <NSObject>
+@protocol FCProgressDelegate<NSObject>
 @required
-- (void) progressView:(FCProgressView*)progressView didSelectAtItemType:(SquareType)type;
+- (void)progressView:(FCProgressView*)progressView didSelectAtItemType:(SquareType)type;
 @end
