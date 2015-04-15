@@ -23,8 +23,7 @@ NSString * const DB_FITNESS = @"fitness.db";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.rootViewController = [[LoginViewController alloc] init];
-    [self presentToDashboardTabController];
+    [self presentToLoginController];
     
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"Already have token");
@@ -49,6 +48,12 @@ NSString * const DB_FITNESS = @"fitness.db";
 }
 
 #pragma mark - Change RootController
+- (void)presentToLoginController {
+    self.window.rootViewController = [[LoginViewController alloc] init];
+    self.dashboardTabController = nil;
+    self.navigationController = nil;
+}
+
 - (void)presentToDashboardTabController {
     [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleDefault];
     self.dashboardTabController = [[DashboardTabController alloc] init];

@@ -14,6 +14,11 @@
 - (void)sessionStateChanged:(FBSession*)session state:(FBSessionState) state Error:(NSError*)error;
 - (void)userLoggedIn;
 - (void)userLoggedOut;
+- (void)presentToDashboardTabController;
+- (void)presentToLoginController ;
+
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *name;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) BOOL FBIsLogin;

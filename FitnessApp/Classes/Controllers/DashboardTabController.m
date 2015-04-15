@@ -10,20 +10,38 @@
 #import "StatusController.h"
 #import "ChallengeController.h"
 #import "HistoryController.h"
+#import "SocialController.h"
 #import "DahsboardStatusView.h"
+#import "MenuView.h"
+#import "AppDelegate.h"
+
+@interface DashboardTabController () <MenuViewDelegate>
+
+@property (nonatomic, strong) MenuView *menuView;
+@end
 
 @implementation DashboardTabController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
     self.statusView = [[DahsboardStatusView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 70)];
-    [self.statusView setLevelValue:1];
+    [self.statusView setLevelValue:0];
+    self.statusView.nameLabel.text = appDelegate.name;
+    self.statusView.progressView.progess = 100;
+    self.statusView.progressView.maxValue = 1000;
+    [self.statusView.personalView loadImageFromURL:[NSURL URLWithString:appDelegate.url] key:@"personal"];
     [self.view addSubview:self.statusView];
     
     self.logoutButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.logoutButton.frame = CGRectMake(self.view.width - 35, self.statusView.maxY, 35, 70);
     [self.logoutButton setBackgroundImage:[UIImage fitImage:@"index_icon" size:self.logoutButton.size] forState:UIControlStateNormal];
+    [self.logoutButton addTarget:self action:@selector(logoutAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.logoutButton];
+    
+    self.menuView = [[MenuView alloc] init];
+    self.menuView.delegate = self;
     
     self.tabBar.layer.zPosition = 0;
     self.tabBar.barTintColor = [UIColor pageBlueColor];
@@ -65,6 +83,12 @@
     controller.tabBarItem.tag = tag;
 }
 
+- (void)logoutAction:(id)sender {
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [appDelegate userLoggedOut];
+    [appDelegate presentToLoginController];
+}
+
 #pragma mark - TabBar Delegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     for(UIViewController *controller in self.viewControllers) {
@@ -75,11 +99,27 @@
 
 #pragma mark - BarButton Action
 - (void)leftBarButtonAction:(id)sender {
-    
+    if(!self.menuView.isShow) {
+        [self.menuView showInView:self.view];
+    } else {
+        [self.menuView dismiss];
+    }
 }
 
 - (void)rightBarButtonAction:(id)sender {
     
+}
+
+- (void)menuView:(MenuView *)menuView didSeletedButtonIndex:(NSInteger)buttonIndex {
+    NSLog(@"%d", buttonIndex);
+    if(buttonIndex <= 2) {
+        SocialController *socailController = [[SocialController alloc] initWithFrame:self.view.bounds socialPage:buttonIndex];
+        [self addChildViewController:socailController];
+        [socailController didMoveToParentViewController:self];
+        [self.view addSubview:socailController.view];
+    } else if(buttonIndex == 4) {
+        [self logoutAction:nil];
+    }
 }
 
 @end

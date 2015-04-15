@@ -57,12 +57,15 @@
         cell = [[StatusViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentity tableView:tableView];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.textLabel.font = [UIFont fontHelveticaNeueBoldSize:24];
+        
     }
     NSArray *images = (self.selectIndex == 0) ? @[@"icon_lap", @"icon_distance", @"icon_calorie", @"icon_time"] : @[@"icon_lap", @"icon_distance", @"icon_calorie", @"icon_time", @"icon_max_speed"];
     NSArray *titles = (self.selectIndex == 0) ? @[@"LAP", @"DISTANCE", @"CALORIE", @"TIME"] : @[@"LAP", @"DISTANCE", @"CALORIE", @"TIME", @"MAX SPEED"];
+    NSArray *values = (self.selectIndex == 0) ? @[@"1934", @"2.1 KM", @"370", @"1 h 30 m"] : @[@"1934", @"2.1 km", @"370", @"1 h 30 m", @"55 km/h"];
     
     cell.imageView.image = [UIImage fitImage:images[indexPath.row] size:CGSizeMake(35, 35)];
     cell.textLabel.text = titles[indexPath.row];
+    cell.valueLabel.text = values[indexPath.row];
     return cell;
 }
 

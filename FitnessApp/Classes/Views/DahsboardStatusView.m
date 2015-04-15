@@ -7,7 +7,7 @@
 //
 
 #import "DahsboardStatusView.h"
-#import "KRProgressView.h"
+
 
 
 static NSString * const DSNavigationTitles[] = {
@@ -24,7 +24,7 @@ static NSString * const DSMedalImages[] = {
 
 @interface DahsboardStatusView ()
 
-@property (nonatomic, strong) UIImageView *personalView;
+
 @property (nonatomic, strong) UIImageView *levelView;
 @end
 
@@ -34,8 +34,7 @@ static NSString * const DSMedalImages[] = {
     self = [super initWithFrame:frame];
     if(self) {
         self.backgroundColor = [UIColor pageGrayColor];
-        self.personalView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (self.height * 0.5) - (self.height * 0.375), self.height * 0.75, self.height * 0.75)];
-        self.personalView.backgroundColor = [UIColor orangeColor];
+        self.personalView = [[KRAsyncImageView alloc] initWithFrame:CGRectMake(10, (self.height * 0.5) - (self.height * 0.375), self.height * 0.75, self.height * 0.75)];
         [self addSubview:self.personalView];
         
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.personalView.maxX + 5, self.personalView.minY - 5, self.width * 0.3, self.height * 0.4)];
@@ -51,8 +50,6 @@ static NSString * const DSMedalImages[] = {
         self.progressView = [[KRProgressView alloc] initWithFrame:CGRectMake(self.personalView.maxX + 5, self.levelLabel.maxY + 5, self.width * 0.4, self.height * 0.2) progressType:KRProgressBarType];
         self.progressView.progressBackgroundColor = [UIColor colorWithWhite:0.738 alpha:1.000];
         self.progressView.progressColor = [UIColor pageOrangeColor];
-        self.progressView.maxValue = 1000;
-        self.progressView.progess = 263;
         [self addSubview:self.progressView];
         
         self.levelView = [[UIImageView alloc] initWithFrame:CGRectMake(self.nameLabel.maxX, self.nameLabel.minY, self.progressView.minY - self.nameLabel.minY - 10, self.progressView.minY - self.nameLabel.minY - 10)];
@@ -68,11 +65,6 @@ static NSString * const DSMedalImages[] = {
         [self changeNavigationWithPageType:DashboardTodayPage];
     }
     return self;
-}
-
-- (void)setPersonalImage:(UIImage *)personalImage {
-    _personalImage = personalImage;
-    self.personalView.image = self.personalImage;
 }
 
 - (void)changeNavigationWithPageType:(DashboardPageType)type {

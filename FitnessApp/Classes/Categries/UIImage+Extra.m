@@ -21,6 +21,13 @@
     return newImage;
 }
 
+- (UIImage *)resize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 1.5);
+    [self drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 + (UIImage *)loadFileImageName:(NSString *)name {
     return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle]pathForResource:name ofType:nil]];

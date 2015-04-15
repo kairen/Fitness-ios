@@ -20,6 +20,16 @@
 		B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B21ABFB7D400AB0DCD /* Images.xcassets */; };
 		B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */; };
 		B017C5C21ABFB7D400AB0DCD /* FitnessAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */; };
+		B0277ACA1ADEDF6600E6C021 /* KRAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AC91ADEDF6600E6C021 /* KRAsyncImageView.m */; };
+		B0277ACD1ADEE3B500E6C021 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277ACC1ADEE3B500E6C021 /* MenuView.m */; };
+		B0277ADD1ADEE5F600E6C021 /* SocialAreaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AD01ADEE5F600E6C021 /* SocialAreaTableViewCell.m */; };
+		B0277ADE1ADEE5F600E6C021 /* SocialAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AD21ADEE5F600E6C021 /* SocialAreaView.m */; };
+		B0277ADF1ADEE5F600E6C021 /* SocialFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AD41ADEE5F600E6C021 /* SocialFriendsTableViewCell.m */; };
+		B0277AE01ADEE5F600E6C021 /* SocialFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AD61ADEE5F600E6C021 /* SocialFriendsView.m */; };
+		B0277AE11ADEE5F600E6C021 /* SocialMyTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AD81ADEE5F600E6C021 /* SocialMyTeamTableViewCell.m */; };
+		B0277AE21ADEE5F600E6C021 /* SocialMyTeamView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277ADA1ADEE5F600E6C021 /* SocialMyTeamView.m */; };
+		B0277AE31ADEE5F600E6C021 /* SocialView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277ADC1ADEE5F600E6C021 /* SocialView.m */; };
+		B0277AE61ADEE9CA00E6C021 /* SocialController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0277AE51ADEE9CA00E6C021 /* SocialController.m */; };
 		B029CFA71ADB9947002CB2C3 /* UIFont+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFA61ADB9947002CB2C3 /* UIFont+Extra.m */; };
 		B029CFB21ADBA061002CB2C3 /* PageBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFAF1ADBA061002CB2C3 /* PageBasicView.m */; };
 		B029CFB31ADBA061002CB2C3 /* TodayOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFB11ADBA061002CB2C3 /* TodayOverView.m */; };
@@ -105,6 +115,26 @@
 		B017C5BB1ABFB7D400AB0DCD /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B017C5C01ABFB7D400AB0DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitnessAppTests.m; sourceTree = "<group>"; };
+		B0277AC81ADEDF6600E6C021 /* KRAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRAsyncImageView.h; sourceTree = "<group>"; };
+		B0277AC91ADEDF6600E6C021 /* KRAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRAsyncImageView.m; sourceTree = "<group>"; };
+		B0277ACB1ADEE3B500E6C021 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		B0277ACC1ADEE3B500E6C021 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		B0277ACF1ADEE5F600E6C021 /* SocialAreaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialAreaTableViewCell.h; sourceTree = "<group>"; };
+		B0277AD01ADEE5F600E6C021 /* SocialAreaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialAreaTableViewCell.m; sourceTree = "<group>"; };
+		B0277AD11ADEE5F600E6C021 /* SocialAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialAreaView.h; sourceTree = "<group>"; };
+		B0277AD21ADEE5F600E6C021 /* SocialAreaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialAreaView.m; sourceTree = "<group>"; };
+		B0277AD31ADEE5F600E6C021 /* SocialFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialFriendsTableViewCell.h; sourceTree = "<group>"; };
+		B0277AD41ADEE5F600E6C021 /* SocialFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialFriendsTableViewCell.m; sourceTree = "<group>"; };
+		B0277AD51ADEE5F600E6C021 /* SocialFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialFriendsView.h; sourceTree = "<group>"; };
+		B0277AD61ADEE5F600E6C021 /* SocialFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialFriendsView.m; sourceTree = "<group>"; };
+		B0277AD71ADEE5F600E6C021 /* SocialMyTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMyTeamTableViewCell.h; sourceTree = "<group>"; };
+		B0277AD81ADEE5F600E6C021 /* SocialMyTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMyTeamTableViewCell.m; sourceTree = "<group>"; };
+		B0277AD91ADEE5F600E6C021 /* SocialMyTeamView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialMyTeamView.h; sourceTree = "<group>"; };
+		B0277ADA1ADEE5F600E6C021 /* SocialMyTeamView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialMyTeamView.m; sourceTree = "<group>"; };
+		B0277ADB1ADEE5F600E6C021 /* SocialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialView.h; sourceTree = "<group>"; };
+		B0277ADC1ADEE5F600E6C021 /* SocialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialView.m; sourceTree = "<group>"; };
+		B0277AE41ADEE9CA00E6C021 /* SocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialController.h; sourceTree = "<group>"; };
+		B0277AE51ADEE9CA00E6C021 /* SocialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialController.m; sourceTree = "<group>"; };
 		B029CFA51ADB9947002CB2C3 /* UIFont+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extra.h"; sourceTree = "<group>"; };
 		B029CFA61ADB9947002CB2C3 /* UIFont+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extra.m"; sourceTree = "<group>"; };
 		B029CFAE1ADBA061002CB2C3 /* PageBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBasicView.h; sourceTree = "<group>"; };
@@ -338,6 +368,8 @@
 				B029CFC71ADE23E6002CB2C3 /* ChallengeController.m */,
 				B029CFC91ADE23F7002CB2C3 /* HistoryController.h */,
 				B029CFCA1ADE23F7002CB2C3 /* HistoryController.m */,
+				B0277AE41ADEE9CA00E6C021 /* SocialController.h */,
+				B0277AE51ADEE9CA00E6C021 /* SocialController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -345,6 +377,8 @@
 		B017C5CE1ABFBB7500AB0DCD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B0277AC81ADEDF6600E6C021 /* KRAsyncImageView.h */,
+				B0277AC91ADEDF6600E6C021 /* KRAsyncImageView.m */,
 				B029CFF71ADEDB80002CB2C3 /* Calendar */,
 				B0E08FF01AC101E500764149 /* TransitionAnimation.h */,
 				B0E08FF11AC101E500764149 /* TransitionAnimation.m */,
@@ -372,18 +406,42 @@
 		B017C5D01ABFBB7500AB0DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0277ACB1ADEE3B500E6C021 /* MenuView.h */,
+				B0277ACC1ADEE3B500E6C021 /* MenuView.m */,
 				B029CFF41ADED7E8002CB2C3 /* MyGoalView.h */,
 				B029CFF51ADED7E8002CB2C3 /* MyGoalView.m */,
-				B029CFD81ADEC8AE002CB2C3 /* HistoryViews */,
-				B029CFDB1ADEC8AE002CB2C3 /* StatusViews */,
-				B029CFAD1ADBA061002CB2C3 /* PageViews */,
-				B0E08FE01AC0FC7A00764149 /* LoginViews */,
 				B029CFCC1ADE5BDB002CB2C3 /* DahsboardStatusView.h */,
 				B029CFCD1ADE5BDB002CB2C3 /* DahsboardStatusView.m */,
 				B029CFD21ADE79B7002CB2C3 /* EquipmentSelectView.h */,
 				B029CFD31ADE79B7002CB2C3 /* EquipmentSelectView.m */,
+				B0277ACE1ADEE5F600E6C021 /* SocialView */,
+				B029CFD81ADEC8AE002CB2C3 /* HistoryViews */,
+				B029CFDB1ADEC8AE002CB2C3 /* StatusViews */,
+				B029CFAD1ADBA061002CB2C3 /* PageViews */,
+				B0E08FE01AC0FC7A00764149 /* LoginViews */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B0277ACE1ADEE5F600E6C021 /* SocialView */ = {
+			isa = PBXGroup;
+			children = (
+				B0277ACF1ADEE5F600E6C021 /* SocialAreaTableViewCell.h */,
+				B0277AD01ADEE5F600E6C021 /* SocialAreaTableViewCell.m */,
+				B0277AD11ADEE5F600E6C021 /* SocialAreaView.h */,
+				B0277AD21ADEE5F600E6C021 /* SocialAreaView.m */,
+				B0277AD31ADEE5F600E6C021 /* SocialFriendsTableViewCell.h */,
+				B0277AD41ADEE5F600E6C021 /* SocialFriendsTableViewCell.m */,
+				B0277AD51ADEE5F600E6C021 /* SocialFriendsView.h */,
+				B0277AD61ADEE5F600E6C021 /* SocialFriendsView.m */,
+				B0277AD71ADEE5F600E6C021 /* SocialMyTeamTableViewCell.h */,
+				B0277AD81ADEE5F600E6C021 /* SocialMyTeamTableViewCell.m */,
+				B0277AD91ADEE5F600E6C021 /* SocialMyTeamView.h */,
+				B0277ADA1ADEE5F600E6C021 /* SocialMyTeamView.m */,
+				B0277ADB1ADEE5F600E6C021 /* SocialView.h */,
+				B0277ADC1ADEE5F600E6C021 /* SocialView.m */,
+			);
+			path = SocialView;
 			sourceTree = "<group>";
 		};
 		B029CFAD1ADBA061002CB2C3 /* PageViews */ = {
@@ -690,10 +748,12 @@
 				B029CFA71ADB9947002CB2C3 /* UIFont+Extra.m in Sources */,
 				B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */,
 				B029D0031ADEDB80002CB2C3 /* UICalendar.m in Sources */,
+				B0277AE21ADEE5F600E6C021 /* SocialMyTeamView.m in Sources */,
 				B029CFF61ADED7E8002CB2C3 /* MyGoalView.m in Sources */,
 				B0E08FFC1AC133B000764149 /* HTTPClient.m in Sources */,
 				B0D57D241AC05854000BAAA2 /* Animations.m in Sources */,
 				B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */,
+				B0277ADF1ADEE5F600E6C021 /* SocialFriendsTableViewCell.m in Sources */,
 				B04D59221AC2C58F002067F6 /* User.m in Sources */,
 				B029CFDE1ADEC8AE002CB2C3 /* HistoryView.m in Sources */,
 				B029CFDF1ADEC8AE002CB2C3 /* StatusView.m in Sources */,
@@ -705,12 +765,15 @@
 				B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */,
 				B06E1F601AC1C7E400DC5817 /* HTTPStatuCode.m in Sources */,
 				B04D59281AC5478B002067F6 /* HTTPParameterKeys.m in Sources */,
+				B0277ACA1ADEDF6600E6C021 /* KRAsyncImageView.m in Sources */,
 				B029CFD41ADE79B7002CB2C3 /* EquipmentSelectView.m in Sources */,
 				B029CFCE1ADE5BDB002CB2C3 /* DahsboardStatusView.m in Sources */,
+				B0277AE61ADEE9CA00E6C021 /* SocialController.m in Sources */,
 				B0E08FDF1AC0FC5F00764149 /* WHSettingController.m in Sources */,
 				B029CFB31ADBA061002CB2C3 /* TodayOverView.m in Sources */,
 				B04D59311AC55C08002067F6 /* ExerciseData.m in Sources */,
 				B017C5AB1ABFB7D400AB0DCD /* AppDelegate.m in Sources */,
+				B0277AE01ADEE5F600E6C021 /* SocialFriendsView.m in Sources */,
 				B017C5A81ABFB7D400AB0DCD /* main.m in Sources */,
 				B029CFB91ADCE064002CB2C3 /* TodayOverViewCell.m in Sources */,
 				B029D0041ADEDB80002CB2C3 /* UICalendarCell.m in Sources */,
@@ -726,9 +789,14 @@
 				B029CFE21ADECE0D002CB2C3 /* StatusViewCell.m in Sources */,
 				B029CFCB1ADE23F7002CB2C3 /* HistoryController.m in Sources */,
 				B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */,
+				B0277ADD1ADEE5F600E6C021 /* SocialAreaTableViewCell.m in Sources */,
+				B0277AE31ADEE5F600E6C021 /* SocialView.m in Sources */,
+				B0277ADE1ADEE5F600E6C021 /* SocialAreaView.m in Sources */,
 				B0E08FEE1AC0FC7A00764149 /* RegisterView.m in Sources */,
 				B029CFC51ADE2386002CB2C3 /* StatusController.m in Sources */,
+				B0277ACD1ADEE3B500E6C021 /* MenuView.m in Sources */,
 				B0E08FFF1AC1535D00764149 /* HTTPIncludes.m in Sources */,
+				B0277AE11ADEE5F600E6C021 /* SocialMyTeamTableViewCell.m in Sources */,
 				B029D0021ADEDB80002CB2C3 /* CalendarMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

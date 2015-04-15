@@ -40,12 +40,11 @@
 //        self.titleLabel.font = [UIFont fontHelveticaNeueBoldSize:16];
 //        [self addSubview:self.titleLabel];
 //        
-//        self.valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.titleLabel.maxX, 0, self.progressView.width * 0.5 , rowHeight  * 0.4)];
-//        self.valueLabel.text = @"75%";
-//        self.valueLabel.textAlignment = NSTextAlignmentRight;
-//        self.valueLabel.textColor = [UIColor whiteColor];
-//        self.valueLabel.font = [UIFont fontHelveticaNeueLightSize:16];
-//        [self addSubview:self.valueLabel];
+        self.valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.width * 0.3, rowHeight  * 0.4)];
+        self.valueLabel.textAlignment = NSTextAlignmentRight;
+        self.valueLabel.textColor = [UIColor whiteColor];
+        self.valueLabel.font = [UIFont fontHelveticaNeueLightSize:18];
+        self.accessoryView = self.valueLabel;
     }
     return self;
 }

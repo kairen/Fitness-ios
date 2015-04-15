@@ -73,6 +73,10 @@
 #pragma mark - HTTP Result  Delegate
 - (void)httpRequestLoginResult:(id)resultObject {
     NSLog(@"%@", resultObject);
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.url = resultObject[@"data"][@"profileImageUrl"];
+    appDelegate.name = resultObject[@"data"][@"name"];
+
     WHSettingController *settingController = [[WHSettingController alloc] init];
     settingController.transitioningDelegate = self;
     [self presentViewController:settingController animated:YES completion:nil];

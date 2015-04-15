@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KRProgressView.h"
+#import "KRAsyncImageView.h"
 
 typedef NS_ENUM(NSUInteger, DashboardPageType) {
     DashboardTodayPage = 0,
@@ -15,18 +17,18 @@ typedef NS_ENUM(NSUInteger, DashboardPageType) {
 };
 
 @class KRProgressView;
+@class KRAsyncImageView;
 
 @interface DahsboardStatusView : UIView
-
 
 - (void)changeNavigationWithPageType:(DashboardPageType)type;
 - (void)setLevelValue:(NSInteger)level;
 
-@property (nonatomic, strong) UIImage *personalImage;
-
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *levelLabel;
 @property (nonatomic, strong) UILabel *navigationLabel;
+
+@property (nonatomic, strong) KRAsyncImageView *personalView;
 
 @property (nonatomic, strong) KRProgressView *progressView;
 @end

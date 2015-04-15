@@ -11,6 +11,7 @@
 #import "HTTPClient.h"
 #import "TodayOverView.h"
 #import "TodayOverViewCell.h"
+#import "AppDelegate.h"
 
 @interface WHSettingController () <HTTPClientDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) WHSettingView *settingView;
@@ -39,6 +40,11 @@
     }
 }
 
+- (void)todayOverviewButtonAction:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate presentToDashboardTabController];
+}
+
 #pragma mark - HTTP Request Body Meteric Result
 - (void)httpRequestUserBodyResult:(id)resultObject {
     NSLog(@"%@", resultObject);
@@ -52,6 +58,7 @@
     TodayOverView *todayOverView = [[TodayOverView alloc] initWithFrame:self.view.frame];
     todayOverView.socialGameView.delegate = self;
     todayOverView.socialGameView.dataSource = self;
+    [todayOverView.actionButton addTarget:self action:@selector(todayOverviewButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:todayOverView];
 }
 
@@ -66,7 +73,7 @@
     if(!cell) {
         cell = [[TodayOverViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentity tableView:tableView];
     }
-    cell.titleLabel.text = @[@"Chan,Gupta",@"張皓惟"][indexPath.row];
+    cell.titleLabel.text = @[@"Gupta",@"Jobs"][indexPath.row];
     [cell setProgressValue:[@[@(80),@(39)][indexPath.row] floatValue]];
     return cell;
 }

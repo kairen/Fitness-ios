@@ -12,6 +12,8 @@
 
 + (UIImage*)loadFileImageName:(NSString*)name;
 + (UIImage *)fitImage:(NSString *)imageName size:(CGSize)newSize;
+- (UIImage *)resize:(CGSize)newSize;
+
 - (UIImage *)boxblurImageWithBlur:(CGFloat)blur;
 
 @end
