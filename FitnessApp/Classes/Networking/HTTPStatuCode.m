@@ -52,14 +52,11 @@ NSString * HTTPRequestDomain = @"FitnessNetworkError";
  */
 + (NSError *)facebookLoginErrorWithCode:(HTTPFacebookError)code {
     switch (code) {
-        case HTTPFacebookTokenError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid token."}];
-        } break;
-        case HTTPFacebookIDError: {
-            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid facebook id."}];
-        } break;
         case HTTPFacebookUserNameError: {
             return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"invalid username."}];
+        } break;
+        case HTTPFacebookEmptyUserError: {
+            return [NSError errorWithDomain:HTTPRequestDomain code:code userInfo:@{NSLocalizedDescriptionKey:@"user does not exist, please set username."}];
         } break;
     }
     return nil;

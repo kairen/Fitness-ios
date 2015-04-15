@@ -12,6 +12,7 @@
 #import "UIColor+Extra.h"
 #import "UIImage+Extra.h"
 #import "UIView+Layout.h"
+#import "UIFont+Extra.h"
 
 
 #endif

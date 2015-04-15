@@ -34,7 +34,7 @@
 }
 
 - (void)configureTextField:(UITextField *)textField  placeHolder:(NSString *)hoderString leftImage:(NSString *)imageName {
-    textField.textColor = [UIColor colorWithRGBHex:@"#00A0E9" alpha:1.0];
+    textField.textColor = [UIColor pageBlueColor];
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:hoderString attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]}];
     UIImageView *leftImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.height * 0.075, self.height * 0.05)];

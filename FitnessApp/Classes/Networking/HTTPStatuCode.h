@@ -32,9 +32,8 @@ typedef NS_ENUM(NSInteger, HTTPRegisterError) {
 };
 
 typedef NS_ENUM(NSInteger, HTTPFacebookError) {
-    HTTPFacebookTokenError = -3,
-    HTTPFacebookIDError = -4,
-    HTTPFacebookUserNameError = -5
+    HTTPFacebookUserNameError = -3,
+    HTTPFacebookEmptyUserError = -4
 };
 
 typedef NS_ENUM(NSInteger, HTTPChallengeError) {

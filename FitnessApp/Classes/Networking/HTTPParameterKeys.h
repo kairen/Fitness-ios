@@ -16,6 +16,7 @@ extern NSString * AccountUserNameKey;
 extern NSString * AccountPasswdKey;
 extern NSString * AccountEmailKey;
 extern NSString * AccountGenderKey;
+extern NSString * AccountRegionKey;
 
 extern NSString * BodyWeightKey;
 extern NSString * BodyHeightKey;

@@ -22,22 +22,34 @@ NSString * HTTPServerURLString = @"http://wondercore.herokuapp.com";
 
 
 /**
- *  User Login and Register
+ *  User Authentication
  */
 NSString * HTTPRegisterWithUserInfoURLString = @"/api/user"; // post
 NSString * HTTPLoginWithUserInfoURLString = @"/api/user/login"; // post
 NSString * HTTPLoginWithFacebookURLString = @"/api/user/auth"; // post
 NSString * HTTPLogoutAccountURLString = @"/api/user/logout";// post
 
-NSString * HTTPPostBodyMetricURLString = @"/api/bodymetric"; // post
-NSString * HTTPGetBodyMetricURLString = @"/api/bodymetric/find"; // post
-NSString * HTTPSessionCreateURLString = @"/api/exercisesession"; // post
-NSString * HTTPSessionUpdateURLString = @"/api/exercisesessiondata"; // post
-
 /**
- *  Users List
+ *  Users Model
  */
 NSString * HTTPGetUserListURLString = @"/api/user/find";// post
+
+NSString * HTTPGetDailyRecommendedCaloriesURLString = @"/api/user/getdailycalories"; // post
+NSString * HTTPGetDailyRecommendedWonderPointsURLString = @"/api/user/getdailypoints"; // post
+NSString * HTTPGetTodayScreenSummaryURLString = @"/api/user/getdailysummary";
+NSString * HTTPGetTodayScreenOverviewURLString = @"/api/user/getdailyoverview";
+
+/**
+ *  BodyMetric
+ */
+NSString * HTTPPostBodyMetricURLString = @"/api/bodymetric"; // post
+NSString * HTTPGetBodyMetricURLString = @"/api/bodymetric/find"; // post
+
+/**
+ *  Session
+ */
+NSString * HTTPSessionCreateURLString = @"/api/exercisesession"; // post
+NSString * HTTPSessionUpdateURLString = @"/api/exercisesessiondata"; // post
 
 /**
  *  Challenge

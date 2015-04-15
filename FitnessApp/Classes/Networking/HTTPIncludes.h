@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 extern NSString * HTTPServerURLString;
 
 /**
@@ -17,16 +16,30 @@ extern NSString * HTTPServerURLString;
  */
 extern NSString * HTTPRegisterWithUserInfoURLString;
 extern NSString * HTTPLoginWithUserInfoURLString;
+extern NSString * HTTPLogoutAccountURLString;
 extern NSString * HTTPLoginWithFacebookURLString;
-extern NSString * HTTPPostBodyMetricURLString;
-extern NSString * HTTPGetBodyMetricURLString;
-extern NSString * HTTPSessionCreateURLString;
-extern NSString * HTTPSessionUpdateURLString;
 
 /**
- *  Users List
+ *  Users Model
  */
+extern NSString * HTTPGetDailyRecommendedCaloriesURLString;
+extern NSString * HTTPGetDailyRecommendedWonderPointsURLString;
+extern NSString * HTTPGetTodayScreenSummaryURLString;
+extern NSString * HTTPGetTodayScreenOverviewURLString;
+
 extern NSString * HTTPGetUserListURLString;
+
+/**
+ *  BodyMetric
+ */
+extern NSString * HTTPPostBodyMetricURLString;
+extern NSString * HTTPGetBodyMetricURLString;
+
+/**
+ *  Session
+ */
+extern NSString * HTTPSessionCreateURLString;
+extern NSString * HTTPSessionUpdateURLString;
 
 /**
  *  Challenge

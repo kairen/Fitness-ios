@@ -21,7 +21,6 @@
 
 @end
 
-
 @implementation FCProgressView
 
 - (instancetype)initWithFrame:(CGRect)frame type:(ProgressViewType)progressType backgroundColor:(UIColor*)backgroundColor {
@@ -32,8 +31,9 @@
         _duration = 2;
         _shapeLayer = [CAShapeLayer layer];
         _shapeLayer.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
+        
         _progressLayer = [CAShapeLayer layer];
-        _progressLayer.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
+        _progressLayer.frame = CGRectMake(0, 0, CGRectGetWidth(_shapeLayer.frame), CGRectGetHeight(_shapeLayer.frame));
         switch (progressType) {
             case ProgressBarType : {
                 _shapeLayer.path = [UIBezierPath bezierPathWithRoundedRect:_shapeLayer.frame cornerRadius:CGRectGetHeight(frame) / 2].CGPath;
@@ -80,7 +80,7 @@
         }
         if (progressType != ProgressDotType) {
             [self.layer addSublayer:_shapeLayer];
-            [self.layer addSublayer:_progressLayer];
+            [self.shapeLayer addSublayer:_progressLayer];
         } else {
             [self.layer addSublayer:_progressLayer];
             [self.layer addSublayer:_shapeLayer];
@@ -89,13 +89,13 @@
     return self;
 }
 
-- (void)setProgressColor:(UIColor *)color {
+- (void)setProgressColor:(UIColor *)progressColor {
     if (_viewType != ProgressSquareType) {
-        _progressLayer.strokeColor = color.CGColor;
+        _progressLayer.strokeColor = progressColor.CGColor;
     } else {
-        _buttonColor = color;
-        _roundLayer.fillColor = color.CGColor;
-        _squareFillLayer.fillColor = color.CGColor;
+        _buttonColor = progressColor;
+        _roundLayer.fillColor = progressColor.CGColor;
+        _squareFillLayer.fillColor = progressColor.CGColor;
         [self.subviews[0] setBackgroundColor:_buttonColor];
     }
 }
@@ -128,13 +128,15 @@
 
 - (void) setProgressValue:(CGFloat)progressValue {
     _progressValue = progressValue;
-    float percent = self.progressValue / self.maxValue;
+    CGFloat percent = self.progressValue / self.maxValue;
     switch (self.viewType) {
         case ProgressBarType: {
-            CGMutablePathRef progressPath = CGPathCreateMutable();
-            CGPathMoveToPoint(progressPath, nil, CGRectGetMidY(_shapeLayer.frame), self.height * 0.5);
-            CGPathAddLineToPoint(progressPath, nil, self.width * percent, self.height * 0.5);
-            _progressLayer.path = progressPath;
+            if(percent != 0.0) {
+                CGMutablePathRef progressPath = CGPathCreateMutable();
+                CGPathMoveToPoint(progressPath, nil, CGRectGetMidY(_shapeLayer.frame), self.height * 0.5);
+                CGPathAddLineToPoint(progressPath, nil, self.width * percent, self.height * 0.5);
+                _progressLayer.path = progressPath;
+            }
             break;
         } case ProgressCircleType: {
             _progressLayer.path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(CGRectGetWidth(_progressLayer.frame) / 2, CGRectGetHeight(_progressLayer.frame) / 2) radius:(_progressLayer.frame.size.width) / 2 startAngle:M_PI * 3 / 2 endAngle:M_PI * 2 * percent + M_PI * 3 / 2 clockwise:YES].CGPath;

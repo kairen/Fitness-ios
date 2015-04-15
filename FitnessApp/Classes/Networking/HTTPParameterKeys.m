@@ -16,6 +16,8 @@ NSString * AccountUserNameKey = @"userName";
 NSString * AccountPasswdKey = @"password";
 NSString * AccountEmailKey = @"email";
 NSString * AccountGenderKey = @"gender";
+NSString * AccountRegionKey = @"region";
+
 
 NSString * BodyWeightKey = @"weight";
 NSString * BodyHeightKey = @"height";

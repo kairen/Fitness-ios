@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-
 @interface FitnessAppTests : XCTestCase
 
 @end

@@ -9,7 +9,7 @@
 #import "HTTPClient.h"
 #import "HTTPStatuCode.h"
 #import "HTTPParameterKeys.h"
-#import "HTTPIndicator.h"
+#import "SVProgressHUD.h"
 
 static NSTimeInterval const HTTPRequestTimeout = 5;
 static NSString * const HTTPAlertViewTitle = @"HTTP Status";
@@ -37,12 +37,15 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
 }
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    [SVProgressHUD showErrorWithStatus:@"Error ..."];
+    [SVProgressHUD dismiss];
     UIAlertView *messageAlert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:nil, nil];
     [messageAlert show];
 }
 
 - (BOOL)checkSuccessWithFormat:(HTTPErrorFormats)format response:(id)response {
     NSInteger statusCode = [response[HTTPResultKey] integerValue];
+    [SVProgressHUD dismiss];
     NSError *error = [HTTPStatuCode errorWithFormat:format statusCode:statusCode];
     if(error) {
         [self showAlertWithTitle:HTTPAlertViewTitle message:error.localizedDescription];
@@ -61,6 +64,8 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
 - (void)requestURL:(NSString *)url method:(HTTPRequestMethod)method parameters:(id)parameters success:(HTTPSuccessBlock)success {
     
     typeof(self) __weak weakSelf = self;
+    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"Loading ..." maskType:SVProgressHUDMaskTypeBlack];
     switch (method) {
         case HTTPRequestGET: {
             [self GET:url parameters:parameters success:success failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -186,7 +191,30 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
     typeof(self) __weak weakSelf = self;
     [self requestURL:HTTPSessionCreateURLString method:HTTPRequestPOST parameters:sessionInfo success:^(NSURLSessionDataTask *task, id responseObject) {
         BOOL succes = [weakSelf checkSuccessWithFormat:0 response:responseObject];
-        
+        if(succes) {
+            
+        }
+    }];
+}
+
+
+- (void)getDailyRecommendedCaloriesCompletation:(HTTPResponseBlock)complete {
+    typeof(self) __weak weakSelf = self;
+    [self requestURL:HTTPGetDailyRecommendedCaloriesURLString method:HTTPRequestPOST parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+         BOOL succes = [weakSelf checkSuccessWithFormat:0 response:responseObject];
+        if(succes && complete) {
+            complete(responseObject);
+        }
+    }];
+}
+
+- (void)getDailyRecommendedWonderPointsCompletation:(HTTPResponseBlock)complete {
+    typeof(self) __weak weakSelf = self;
+    [self requestURL:HTTPGetDailyRecommendedWonderPointsURLString method:HTTPRequestPOST parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        BOOL succes = [weakSelf checkSuccessWithFormat:0 response:responseObject];
+        if(succes && complete) {
+            complete(responseObject);
+        }
     }];
 }
 

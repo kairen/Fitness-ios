@@ -8,7 +8,33 @@
 
 #import "UIView+Layout.h"
 
+static CGFloat const UIAutoScaleX[] = {
+    1, 1.171875, 1.29375
+};
+
+static CGFloat const UIAutoScaleY[] = {
+    1, 1.17429577, 1.2957
+};
+
 @implementation UIView (Layout)
+
+- (CGRect)scaleMakeX:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height {
+    CGRect frame = self.frame;
+    CGFloat scaleX, scaleY;
+    if(CGRectGetHeight(frame) <= 568) {
+        scaleX =  UIAutoScaleX[0]; scaleY = UIAutoScaleY[0];
+    } else if(CGRectGetHeight(frame) >= 568 && CGRectGetHeight(frame) <= 667) {
+        scaleX =  UIAutoScaleX[1]; scaleY = UIAutoScaleY[1];
+    } else {
+        scaleX =  UIAutoScaleX[2]; scaleY = UIAutoScaleY[2];
+    }
+    CGRect rect;
+    rect.origin.x = x * scaleX;
+    rect.origin.y = y * scaleY;
+    rect.size.width = width * scaleX;
+    rect.size.height = height * scaleY;
+    return rect;
+}
 
 - (CGFloat)minX {
     return CGRectGetMinX(self.frame);
@@ -55,5 +81,6 @@
     }
     return KeyboardiPhonePlus;
 }
+
 
 @end

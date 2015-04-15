@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FF14B521117B48D35D69B948"
+               BlueprintIdentifier = "5A880B8E947620AEC97A0565"
                BuildableName = "libPods-FitnessApp-JSONModel.a"
                BlueprintName = "Pods-FitnessApp-JSONModel"
                ReferencedContainer = "container:Pods.xcodeproj">

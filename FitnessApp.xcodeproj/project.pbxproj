@@ -20,9 +20,37 @@
 		B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B21ABFB7D400AB0DCD /* Images.xcassets */; };
 		B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */; };
 		B017C5C21ABFB7D400AB0DCD /* FitnessAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */; };
-		B04D591F1AC2C0E6002067F6 /* HTTPIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */; };
+		B029CFA71ADB9947002CB2C3 /* UIFont+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFA61ADB9947002CB2C3 /* UIFont+Extra.m */; };
+		B029CFB21ADBA061002CB2C3 /* PageBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFAF1ADBA061002CB2C3 /* PageBasicView.m */; };
+		B029CFB31ADBA061002CB2C3 /* TodayOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFB11ADBA061002CB2C3 /* TodayOverView.m */; };
+		B029CFB61ADBB6B6002CB2C3 /* KRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFB51ADBB6B6002CB2C3 /* KRProgressView.m */; };
+		B029CFB91ADCE064002CB2C3 /* TodayOverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFB81ADCE064002CB2C3 /* TodayOverViewCell.m */; };
+		B029CFBE1ADE12B0002CB2C3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B029CFBB1ADE12B0002CB2C3 /* SVProgressHUD.bundle */; };
+		B029CFBF1ADE12B0002CB2C3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFBD1ADE12B0002CB2C3 /* SVProgressHUD.m */; };
+		B029CFC21ADE235E002CB2C3 /* DashboardTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFC11ADE235E002CB2C3 /* DashboardTabController.m */; };
+		B029CFC51ADE2386002CB2C3 /* StatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFC41ADE2386002CB2C3 /* StatusController.m */; };
+		B029CFC81ADE23E6002CB2C3 /* ChallengeController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFC71ADE23E6002CB2C3 /* ChallengeController.m */; };
+		B029CFCB1ADE23F7002CB2C3 /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFCA1ADE23F7002CB2C3 /* HistoryController.m */; };
+		B029CFCE1ADE5BDB002CB2C3 /* DahsboardStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFCD1ADE5BDB002CB2C3 /* DahsboardStatusView.m */; };
+		B029CFD41ADE79B7002CB2C3 /* EquipmentSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFD31ADE79B7002CB2C3 /* EquipmentSelectView.m */; };
+		B029CFDE1ADEC8AE002CB2C3 /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFDA1ADEC8AE002CB2C3 /* HistoryView.m */; };
+		B029CFDF1ADEC8AE002CB2C3 /* StatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFDD1ADEC8AE002CB2C3 /* StatusView.m */; };
+		B029CFE21ADECE0D002CB2C3 /* StatusViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFE11ADECE0D002CB2C3 /* StatusViewCell.m */; };
+		B029CFEC1ADED2CD002CB2C3 /* cal_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE41ADED2CD002CB2C3 /* cal_X4.png */; };
+		B029CFED1ADED2CD002CB2C3 /* dis_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE51ADED2CD002CB2C3 /* dis_X4.png */; };
+		B029CFEE1ADED2CD002CB2C3 /* icon_stat_avgspd_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE61ADED2CD002CB2C3 /* icon_stat_avgspd_X4.png */; };
+		B029CFEF1ADED2CD002CB2C3 /* icon_stat_time_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE71ADED2CD002CB2C3 /* icon_stat_time_X4.png */; };
+		B029CFF01ADED2CD002CB2C3 /* icon_stats_steps_X4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE81ADED2CD002CB2C3 /* icon_stats_steps_X4.PNG */; };
+		B029CFF11ADED2CD002CB2C3 /* maxspd_X4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B029CFE91ADED2CD002CB2C3 /* maxspd_X4.PNG */; };
+		B029CFF21ADED2CD002CB2C3 /* stepper_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFEA1ADED2CD002CB2C3 /* stepper_X4.png */; };
+		B029CFF31ADED2CD002CB2C3 /* wandercore_X4.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFEB1ADED2CD002CB2C3 /* wandercore_X4.png */; };
+		B029CFF61ADED7E8002CB2C3 /* MyGoalView.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFF51ADED7E8002CB2C3 /* MyGoalView.m */; };
+		B029D0001ADEDB80002CB2C3 /* Arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFF81ADEDB80002CB2C3 /* Arrow_left.png */; };
+		B029D0011ADEDB80002CB2C3 /* Arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B029CFF91ADEDB80002CB2C3 /* Arrow_right.png */; };
+		B029D0021ADEDB80002CB2C3 /* CalendarMath.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFFB1ADEDB80002CB2C3 /* CalendarMath.m */; };
+		B029D0031ADEDB80002CB2C3 /* UICalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFFD1ADEDB80002CB2C3 /* UICalendar.m */; };
+		B029D0041ADEDB80002CB2C3 /* UICalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B029CFFF1ADEDB80002CB2C3 /* UICalendarCell.m */; };
 		B04D59221AC2C58F002067F6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D59211AC2C58F002067F6 /* User.m */; };
-		B04D59251AC40C74002067F6 /* PageBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D59241AC40C74002067F6 /* PageBasicView.m */; };
 		B04D59281AC5478B002067F6 /* HTTPParameterKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D59271AC5478B002067F6 /* HTTPParameterKeys.m */; };
 		B04D592B1AC55A83002067F6 /* BodyMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D592A1AC55A83002067F6 /* BodyMetric.m */; };
 		B04D592E1AC55BF4002067F6 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = B04D592D1AC55BF4002067F6 /* Session.m */; };
@@ -77,12 +105,57 @@
 		B017C5BB1ABFB7D400AB0DCD /* FitnessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B017C5C01ABFB7D400AB0DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017C5C11ABFB7D400AB0DCD /* FitnessAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitnessAppTests.m; sourceTree = "<group>"; };
-		B04D591D1AC2C0E6002067F6 /* HTTPIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPIndicator.h; sourceTree = "<group>"; };
-		B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPIndicator.m; sourceTree = "<group>"; };
+		B029CFA51ADB9947002CB2C3 /* UIFont+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extra.h"; sourceTree = "<group>"; };
+		B029CFA61ADB9947002CB2C3 /* UIFont+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extra.m"; sourceTree = "<group>"; };
+		B029CFAE1ADBA061002CB2C3 /* PageBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBasicView.h; sourceTree = "<group>"; };
+		B029CFAF1ADBA061002CB2C3 /* PageBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBasicView.m; sourceTree = "<group>"; };
+		B029CFB01ADBA061002CB2C3 /* TodayOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayOverView.h; sourceTree = "<group>"; };
+		B029CFB11ADBA061002CB2C3 /* TodayOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayOverView.m; sourceTree = "<group>"; };
+		B029CFB41ADBB6B6002CB2C3 /* KRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRProgressView.h; sourceTree = "<group>"; };
+		B029CFB51ADBB6B6002CB2C3 /* KRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRProgressView.m; sourceTree = "<group>"; };
+		B029CFB71ADCE064002CB2C3 /* TodayOverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayOverViewCell.h; sourceTree = "<group>"; };
+		B029CFB81ADCE064002CB2C3 /* TodayOverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayOverViewCell.m; sourceTree = "<group>"; };
+		B029CFBB1ADE12B0002CB2C3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B029CFBC1ADE12B0002CB2C3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		B029CFBD1ADE12B0002CB2C3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		B029CFC01ADE235E002CB2C3 /* DashboardTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTabController.h; sourceTree = "<group>"; };
+		B029CFC11ADE235E002CB2C3 /* DashboardTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTabController.m; sourceTree = "<group>"; };
+		B029CFC31ADE2386002CB2C3 /* StatusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusController.h; sourceTree = "<group>"; };
+		B029CFC41ADE2386002CB2C3 /* StatusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusController.m; sourceTree = "<group>"; };
+		B029CFC61ADE23E6002CB2C3 /* ChallengeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeController.h; sourceTree = "<group>"; };
+		B029CFC71ADE23E6002CB2C3 /* ChallengeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeController.m; sourceTree = "<group>"; };
+		B029CFC91ADE23F7002CB2C3 /* HistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryController.h; sourceTree = "<group>"; };
+		B029CFCA1ADE23F7002CB2C3 /* HistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryController.m; sourceTree = "<group>"; };
+		B029CFCC1ADE5BDB002CB2C3 /* DahsboardStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DahsboardStatusView.h; sourceTree = "<group>"; };
+		B029CFCD1ADE5BDB002CB2C3 /* DahsboardStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DahsboardStatusView.m; sourceTree = "<group>"; };
+		B029CFD21ADE79B7002CB2C3 /* EquipmentSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentSelectView.h; sourceTree = "<group>"; };
+		B029CFD31ADE79B7002CB2C3 /* EquipmentSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentSelectView.m; sourceTree = "<group>"; };
+		B029CFD91ADEC8AE002CB2C3 /* HistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
+		B029CFDA1ADEC8AE002CB2C3 /* HistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
+		B029CFDC1ADEC8AE002CB2C3 /* StatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusView.h; sourceTree = "<group>"; };
+		B029CFDD1ADEC8AE002CB2C3 /* StatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusView.m; sourceTree = "<group>"; };
+		B029CFE01ADECE0D002CB2C3 /* StatusViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusViewCell.h; sourceTree = "<group>"; };
+		B029CFE11ADECE0D002CB2C3 /* StatusViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusViewCell.m; sourceTree = "<group>"; };
+		B029CFE41ADED2CD002CB2C3 /* cal_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cal_X4.png; sourceTree = "<group>"; };
+		B029CFE51ADED2CD002CB2C3 /* dis_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dis_X4.png; sourceTree = "<group>"; };
+		B029CFE61ADED2CD002CB2C3 /* icon_stat_avgspd_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_stat_avgspd_X4.png; sourceTree = "<group>"; };
+		B029CFE71ADED2CD002CB2C3 /* icon_stat_time_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_stat_time_X4.png; sourceTree = "<group>"; };
+		B029CFE81ADED2CD002CB2C3 /* icon_stats_steps_X4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_stats_steps_X4.PNG; sourceTree = "<group>"; };
+		B029CFE91ADED2CD002CB2C3 /* maxspd_X4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maxspd_X4.PNG; sourceTree = "<group>"; };
+		B029CFEA1ADED2CD002CB2C3 /* stepper_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stepper_X4.png; sourceTree = "<group>"; };
+		B029CFEB1ADED2CD002CB2C3 /* wandercore_X4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wandercore_X4.png; sourceTree = "<group>"; };
+		B029CFF41ADED7E8002CB2C3 /* MyGoalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGoalView.h; sourceTree = "<group>"; };
+		B029CFF51ADED7E8002CB2C3 /* MyGoalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGoalView.m; sourceTree = "<group>"; };
+		B029CFF81ADEDB80002CB2C3 /* Arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_left.png; sourceTree = "<group>"; };
+		B029CFF91ADEDB80002CB2C3 /* Arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow_right.png; sourceTree = "<group>"; };
+		B029CFFA1ADEDB80002CB2C3 /* CalendarMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMath.h; sourceTree = "<group>"; };
+		B029CFFB1ADEDB80002CB2C3 /* CalendarMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMath.m; sourceTree = "<group>"; };
+		B029CFFC1ADEDB80002CB2C3 /* UICalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICalendar.h; sourceTree = "<group>"; };
+		B029CFFD1ADEDB80002CB2C3 /* UICalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICalendar.m; sourceTree = "<group>"; };
+		B029CFFE1ADEDB80002CB2C3 /* UICalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICalendarCell.h; sourceTree = "<group>"; };
+		B029CFFF1ADEDB80002CB2C3 /* UICalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICalendarCell.m; sourceTree = "<group>"; };
 		B04D59201AC2C58F002067F6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B04D59211AC2C58F002067F6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		B04D59231AC40C74002067F6 /* PageBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBasicView.h; sourceTree = "<group>"; };
-		B04D59241AC40C74002067F6 /* PageBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBasicView.m; sourceTree = "<group>"; };
 		B04D59261AC5478B002067F6 /* HTTPParameterKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPParameterKeys.h; sourceTree = "<group>"; };
 		B04D59271AC5478B002067F6 /* HTTPParameterKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPParameterKeys.m; sourceTree = "<group>"; };
 		B04D59291AC55A83002067F6 /* BodyMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyMetric.h; sourceTree = "<group>"; };
@@ -190,6 +263,7 @@
 				B017C5A91ABFB7D400AB0DCD /* AppDelegate.h */,
 				B017C5AA1ABFB7D400AB0DCD /* AppDelegate.m */,
 				B017C5B21ABFB7D400AB0DCD /* Images.xcassets */,
+				B029CFE31ADED2CD002CB2C3 /* icons */,
 				B017C5B41ABFB7D400AB0DCD /* LaunchScreen.xib */,
 				B017C5A51ABFB7D400AB0DCD /* Supporting Files */,
 			);
@@ -242,6 +316,8 @@
 			children = (
 				B00596E91ABFC5110042891E /* UIColor+Extra.h */,
 				B00596EA1ABFC5110042891E /* UIColor+Extra.m */,
+				B029CFA51ADB9947002CB2C3 /* UIFont+Extra.h */,
+				B029CFA61ADB9947002CB2C3 /* UIFont+Extra.m */,
 				B00596F51ABFCD720042891E /* UIImage+Extra.h */,
 				B00596F61ABFCD720042891E /* UIImage+Extra.m */,
 				B00596FA1ABFCE450042891E /* UIView+Layout.h */,
@@ -254,6 +330,14 @@
 			isa = PBXGroup;
 			children = (
 				B0E08FD31AC0FC5F00764149 /* LoginControllers */,
+				B029CFC01ADE235E002CB2C3 /* DashboardTabController.h */,
+				B029CFC11ADE235E002CB2C3 /* DashboardTabController.m */,
+				B029CFC31ADE2386002CB2C3 /* StatusController.h */,
+				B029CFC41ADE2386002CB2C3 /* StatusController.m */,
+				B029CFC61ADE23E6002CB2C3 /* ChallengeController.h */,
+				B029CFC71ADE23E6002CB2C3 /* ChallengeController.m */,
+				B029CFC91ADE23F7002CB2C3 /* HistoryController.h */,
+				B029CFCA1ADE23F7002CB2C3 /* HistoryController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,8 +345,10 @@
 		B017C5CE1ABFBB7500AB0DCD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B029CFF71ADEDB80002CB2C3 /* Calendar */,
 				B0E08FF01AC101E500764149 /* TransitionAnimation.h */,
 				B0E08FF11AC101E500764149 /* TransitionAnimation.m */,
+				B029CFBA1ADE12B0002CB2C3 /* SVProgressHUD */,
 				B0D57D1F1AC05854000BAAA2 /* FCProgressView */,
 			);
 			path = Helper;
@@ -286,11 +372,92 @@
 		B017C5D01ABFBB7500AB0DCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B029CFF41ADED7E8002CB2C3 /* MyGoalView.h */,
+				B029CFF51ADED7E8002CB2C3 /* MyGoalView.m */,
+				B029CFD81ADEC8AE002CB2C3 /* HistoryViews */,
+				B029CFDB1ADEC8AE002CB2C3 /* StatusViews */,
+				B029CFAD1ADBA061002CB2C3 /* PageViews */,
 				B0E08FE01AC0FC7A00764149 /* LoginViews */,
-				B04D59231AC40C74002067F6 /* PageBasicView.h */,
-				B04D59241AC40C74002067F6 /* PageBasicView.m */,
+				B029CFCC1ADE5BDB002CB2C3 /* DahsboardStatusView.h */,
+				B029CFCD1ADE5BDB002CB2C3 /* DahsboardStatusView.m */,
+				B029CFD21ADE79B7002CB2C3 /* EquipmentSelectView.h */,
+				B029CFD31ADE79B7002CB2C3 /* EquipmentSelectView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B029CFAD1ADBA061002CB2C3 /* PageViews */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFAE1ADBA061002CB2C3 /* PageBasicView.h */,
+				B029CFAF1ADBA061002CB2C3 /* PageBasicView.m */,
+				B029CFB01ADBA061002CB2C3 /* TodayOverView.h */,
+				B029CFB11ADBA061002CB2C3 /* TodayOverView.m */,
+				B029CFB71ADCE064002CB2C3 /* TodayOverViewCell.h */,
+				B029CFB81ADCE064002CB2C3 /* TodayOverViewCell.m */,
+			);
+			path = PageViews;
+			sourceTree = "<group>";
+		};
+		B029CFBA1ADE12B0002CB2C3 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFBB1ADE12B0002CB2C3 /* SVProgressHUD.bundle */,
+				B029CFBC1ADE12B0002CB2C3 /* SVProgressHUD.h */,
+				B029CFBD1ADE12B0002CB2C3 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		B029CFD81ADEC8AE002CB2C3 /* HistoryViews */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFD91ADEC8AE002CB2C3 /* HistoryView.h */,
+				B029CFDA1ADEC8AE002CB2C3 /* HistoryView.m */,
+			);
+			path = HistoryViews;
+			sourceTree = "<group>";
+		};
+		B029CFDB1ADEC8AE002CB2C3 /* StatusViews */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFDC1ADEC8AE002CB2C3 /* StatusView.h */,
+				B029CFDD1ADEC8AE002CB2C3 /* StatusView.m */,
+				B029CFE01ADECE0D002CB2C3 /* StatusViewCell.h */,
+				B029CFE11ADECE0D002CB2C3 /* StatusViewCell.m */,
+			);
+			path = StatusViews;
+			sourceTree = "<group>";
+		};
+		B029CFE31ADED2CD002CB2C3 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFE41ADED2CD002CB2C3 /* cal_X4.png */,
+				B029CFE51ADED2CD002CB2C3 /* dis_X4.png */,
+				B029CFE61ADED2CD002CB2C3 /* icon_stat_avgspd_X4.png */,
+				B029CFE71ADED2CD002CB2C3 /* icon_stat_time_X4.png */,
+				B029CFE81ADED2CD002CB2C3 /* icon_stats_steps_X4.PNG */,
+				B029CFE91ADED2CD002CB2C3 /* maxspd_X4.PNG */,
+				B029CFEA1ADED2CD002CB2C3 /* stepper_X4.png */,
+				B029CFEB1ADED2CD002CB2C3 /* wandercore_X4.png */,
+			);
+			name = icons;
+			path = ../../../icons;
+			sourceTree = "<group>";
+		};
+		B029CFF71ADEDB80002CB2C3 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B029CFF81ADEDB80002CB2C3 /* Arrow_left.png */,
+				B029CFF91ADEDB80002CB2C3 /* Arrow_right.png */,
+				B029CFFA1ADEDB80002CB2C3 /* CalendarMath.h */,
+				B029CFFB1ADEDB80002CB2C3 /* CalendarMath.m */,
+				B029CFFC1ADEDB80002CB2C3 /* UICalendar.h */,
+				B029CFFD1ADEDB80002CB2C3 /* UICalendar.m */,
+				B029CFFE1ADEDB80002CB2C3 /* UICalendarCell.h */,
+				B029CFFF1ADEDB80002CB2C3 /* UICalendarCell.m */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		B0D57D1F1AC05854000BAAA2 /* FCProgressView */ = {
@@ -300,6 +467,8 @@
 				B0D57D211AC05854000BAAA2 /* Animations.m */,
 				B0D57D221AC05854000BAAA2 /* FCProgressView.h */,
 				B0D57D231AC05854000BAAA2 /* FCProgressView.m */,
+				B029CFB41ADBB6B6002CB2C3 /* KRProgressView.h */,
+				B029CFB51ADBB6B6002CB2C3 /* KRProgressView.m */,
 			);
 			path = FCProgressView;
 			sourceTree = "<group>";
@@ -339,16 +508,14 @@
 		B0E08FF91AC133B000764149 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B0E08FFA1AC133B000764149 /* HTTPClient.h */,
-				B0E08FFB1AC133B000764149 /* HTTPClient.m */,
-				B04D59261AC5478B002067F6 /* HTTPParameterKeys.h */,
-				B04D59271AC5478B002067F6 /* HTTPParameterKeys.m */,
 				B0E08FFD1AC1535D00764149 /* HTTPIncludes.h */,
 				B0E08FFE1AC1535D00764149 /* HTTPIncludes.m */,
+				B04D59261AC5478B002067F6 /* HTTPParameterKeys.h */,
+				B04D59271AC5478B002067F6 /* HTTPParameterKeys.m */,
+				B0E08FFA1AC133B000764149 /* HTTPClient.h */,
+				B0E08FFB1AC133B000764149 /* HTTPClient.m */,
 				B06E1F5E1AC1C7E400DC5817 /* HTTPStatuCode.h */,
 				B06E1F5F1AC1C7E400DC5817 /* HTTPStatuCode.m */,
-				B04D591D1AC2C0E6002067F6 /* HTTPIndicator.h */,
-				B04D591E1AC2C0E6002067F6 /* HTTPIndicator.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -453,11 +620,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B029CFF01ADED2CD002CB2C3 /* icon_stats_steps_X4.PNG in Resources */,
+				B029CFED1ADED2CD002CB2C3 /* dis_X4.png in Resources */,
 				B00596F41ABFC7C70042891E /* Brandon_reg.otf in Resources */,
+				B029CFBE1ADE12B0002CB2C3 /* SVProgressHUD.bundle in Resources */,
+				B029CFF11ADED2CD002CB2C3 /* maxspd_X4.PNG in Resources */,
 				B017C5B61ABFB7D400AB0DCD /* LaunchScreen.xib in Resources */,
 				B017C5B31ABFB7D400AB0DCD /* Images.xcassets in Resources */,
 				B00596F21ABFC7C70042891E /* Brandon_bld.otf in Resources */,
 				B00596F31ABFC7C70042891E /* Brandon_light.otf in Resources */,
+				B029CFF31ADED2CD002CB2C3 /* wandercore_X4.png in Resources */,
+				B029D0011ADEDB80002CB2C3 /* Arrow_right.png in Resources */,
+				B029D0001ADEDB80002CB2C3 /* Arrow_left.png in Resources */,
+				B029CFEF1ADED2CD002CB2C3 /* icon_stat_time_X4.png in Resources */,
+				B029CFF21ADED2CD002CB2C3 /* stepper_X4.png in Resources */,
+				B029CFEC1ADED2CD002CB2C3 /* cal_X4.png in Resources */,
+				B029CFEE1ADED2CD002CB2C3 /* icon_stat_avgspd_X4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,32 +687,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E08FEC1AC0FC7A00764149 /* GenderSwitchView.m in Sources */,
-				B04D591F1AC2C0E6002067F6 /* HTTPIndicator.m in Sources */,
+				B029CFA71ADB9947002CB2C3 /* UIFont+Extra.m in Sources */,
 				B0E08FF51AC10D1F00764149 /* LoginBaseController.m in Sources */,
+				B029D0031ADEDB80002CB2C3 /* UICalendar.m in Sources */,
+				B029CFF61ADED7E8002CB2C3 /* MyGoalView.m in Sources */,
 				B0E08FFC1AC133B000764149 /* HTTPClient.m in Sources */,
 				B0D57D241AC05854000BAAA2 /* Animations.m in Sources */,
 				B0E08FEF1AC0FC7A00764149 /* WHSettingView.m in Sources */,
 				B04D59221AC2C58F002067F6 /* User.m in Sources */,
+				B029CFDE1ADEC8AE002CB2C3 /* HistoryView.m in Sources */,
+				B029CFDF1ADEC8AE002CB2C3 /* StatusView.m in Sources */,
+				B029CFB21ADBA061002CB2C3 /* PageBasicView.m in Sources */,
+				B029CFBF1ADE12B0002CB2C3 /* SVProgressHUD.m in Sources */,
 				B0E08FED1AC0FC7A00764149 /* LoginView.m in Sources */,
+				B029CFB61ADBB6B6002CB2C3 /* KRProgressView.m in Sources */,
 				B0E08FEB1AC0FC7A00764149 /* BaseLoginView.m in Sources */,
 				B0E08FF21AC101E500764149 /* TransitionAnimation.m in Sources */,
 				B06E1F601AC1C7E400DC5817 /* HTTPStatuCode.m in Sources */,
 				B04D59281AC5478B002067F6 /* HTTPParameterKeys.m in Sources */,
+				B029CFD41ADE79B7002CB2C3 /* EquipmentSelectView.m in Sources */,
+				B029CFCE1ADE5BDB002CB2C3 /* DahsboardStatusView.m in Sources */,
 				B0E08FDF1AC0FC5F00764149 /* WHSettingController.m in Sources */,
+				B029CFB31ADBA061002CB2C3 /* TodayOverView.m in Sources */,
 				B04D59311AC55C08002067F6 /* ExerciseData.m in Sources */,
 				B017C5AB1ABFB7D400AB0DCD /* AppDelegate.m in Sources */,
 				B017C5A81ABFB7D400AB0DCD /* main.m in Sources */,
-				B04D59251AC40C74002067F6 /* PageBasicView.m in Sources */,
+				B029CFB91ADCE064002CB2C3 /* TodayOverViewCell.m in Sources */,
+				B029D0041ADEDB80002CB2C3 /* UICalendarCell.m in Sources */,
 				B04D592E1AC55BF4002067F6 /* Session.m in Sources */,
+				B029CFC21ADE235E002CB2C3 /* DashboardTabController.m in Sources */,
 				B0E08FDD1AC0FC5F00764149 /* LoginViewController.m in Sources */,
 				B04D592B1AC55A83002067F6 /* BodyMetric.m in Sources */,
 				B00596F71ABFCD720042891E /* UIImage+Extra.m in Sources */,
 				B00596EB1ABFC5110042891E /* UIColor+Extra.m in Sources */,
+				B029CFC81ADE23E6002CB2C3 /* ChallengeController.m in Sources */,
 				B00596FC1ABFCE450042891E /* UIView+Layout.m in Sources */,
 				B0E08FDE1AC0FC5F00764149 /* RegisterViewController.m in Sources */,
+				B029CFE21ADECE0D002CB2C3 /* StatusViewCell.m in Sources */,
+				B029CFCB1ADE23F7002CB2C3 /* HistoryController.m in Sources */,
 				B0D57D251AC05854000BAAA2 /* FCProgressView.m in Sources */,
 				B0E08FEE1AC0FC7A00764149 /* RegisterView.m in Sources */,
+				B029CFC51ADE2386002CB2C3 /* StatusController.m in Sources */,
 				B0E08FFF1AC1535D00764149 /* HTTPIncludes.m in Sources */,
+				B029D0021ADEDB80002CB2C3 /* CalendarMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,7 +797,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -637,7 +832,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -679,15 +874,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = FitnessAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WonderCode.app/WonderCode";
 			};
 			name = Debug;
 		};
@@ -698,11 +895,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				INFOPLIST_FILE = FitnessAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessApp.app/FitnessApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WonderCode.app/WonderCode";
 			};
 			name = Release;
 		};

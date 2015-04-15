@@ -25,6 +25,7 @@ typedef NS_ENUM(NSUInteger, GenderType) {
 
 - (void)setLeftTitle:(NSString *)leftTitle rightTitle:(NSString *)rightTitle;
 
+
 @property (nonatomic, weak) id <GenderSwitchDelegate> delegate;
 
 @end

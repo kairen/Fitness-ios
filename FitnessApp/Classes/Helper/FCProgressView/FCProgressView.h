@@ -29,13 +29,13 @@ typedef NS_ENUM(NSInteger, SquareType) {
 
 - (instancetype)initWithFrame:(CGRect)frame type:(ProgressViewType)progressType backgroundColor:(UIColor*)color;
 - (void)refresh;
-- (void)setProgressColor:(UIColor*)color;
 - (void)setProgressDuration:(float)duration;
 
 @property (nonatomic, weak) id <FCProgressDelegate> delegate;
 
 @property (nonatomic) CGFloat maxValue;
 @property (nonatomic) CGFloat progressValue;
+@property (nonatomic, strong) UIColor *progressColor;
 @end
 
 @protocol FCProgressDelegate<NSObject>

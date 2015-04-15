@@ -9,8 +9,6 @@
 #import "AFNetworking.h"
 #import "HTTPIncludes.h"
 
-
-
 typedef NS_ENUM(NSInteger, HTTPRequestMethod) {
     HTTPRequestGET = 0,
     HTTPRequestPOST,
@@ -19,6 +17,7 @@ typedef NS_ENUM(NSInteger, HTTPRequestMethod) {
 };
 
 typedef void(^HTTPSuccessBlock)(NSURLSessionDataTask *task, id responseObject);
+typedef void(^HTTPResponseBlock)(id responseObject);
 
 @protocol HTTPClientDelegate;
 
@@ -34,6 +33,9 @@ typedef void(^HTTPSuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 - (void)getUserBodyMetericWithGreaterThanTimestamp:(NSTimeInterval)greaterTime
                                  LessThanTimestamp:(NSTimeInterval)lessTime;
 
+- (void)getDailyRecommendedCaloriesCompletation:(HTTPResponseBlock)complete;
+- (void)getDailyRecommendedWonderPointsCompletation:(HTTPResponseBlock)complete;
+
 - (void)createSessionWithSessionInfo:(NSDictionary *)sessionInfo;
 
 @property (nonatomic, weak) id<HTTPClientDelegate> delegate;
@@ -43,5 +45,6 @@ typedef void(^HTTPSuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 @optional
 - (void)httpRequestRegisterResult:(id)resultObject;
 - (void)httpRequestLoginResult:(id)resultObject;
+
 - (void)httpRequestUserBodyResult:(id)resultObject;
 @end

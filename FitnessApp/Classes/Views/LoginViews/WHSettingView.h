@@ -8,7 +8,7 @@
 
 #import "BaseLoginView.h"
 
-@class FCProgressView;
+@class KRProgressView;
 
 @interface WHSettingView : BaseLoginView
 
@@ -19,5 +19,5 @@
 @property (nonatomic, strong) UITextField *weightField;
 @property (nonatomic, strong) UIButton *nextButton;
 
-@property (nonatomic, strong) FCProgressView *progressView;
+@property (nonatomic, strong) KRProgressView *progressView;
 @end

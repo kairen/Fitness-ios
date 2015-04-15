@@ -7,11 +7,7 @@
 //
 
 #import "WHSettingView.h"
-#import "FCProgressView.h"
-
-#define BMI_BOLD_ATTRIBUTE @{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Bold" size:24], NSForegroundColorAttributeName : [UIColor whiteColor]}
-#define LIGHT_ATTRIBUTE @{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Light" size:24], NSForegroundColorAttributeName:[UIColor whiteColor]}
-#define BOLD_ATTRIBUTE @{NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Bold" size:40], NSForegroundColorAttributeName:[UIColor boldYellowColor]}
+#import "KRProgressView.h"
 
 @interface WHSettingView ()
 @property (nonatomic, strong) UILabel *bodyMassIndexLabel;
@@ -57,10 +53,11 @@
         self.caloriesLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.caloriesLabel];
         
-        self.progressView = [[FCProgressView alloc] initWithFrame:CGRectMake(self.caloriesLabel.minX, self.caloriesLabel.maxY + 10, self.caloriesLabel.width, self.height * 0.044) type:ProgressBarType backgroundColor:[UIColor progressBackgroundColor]];
-        [self.progressView setProgressColor:[UIColor boldYellowColor]];
+        self.progressView = [[KRProgressView alloc] initWithFrame:CGRectMake(self.caloriesLabel.minX, self.caloriesLabel.maxY + 10, self.caloriesLabel.width, self.height * 0.044) progressType:KRProgressBarType];
+        self.progressView.progressBackgroundColor = [UIColor progressBackgroundColor];
+        self.progressView.progressColor = [UIColor pageYellowColor];
         self.progressView.maxValue = 6000;
-        self.progressView.progressValue = 4500;
+        self.progressView.progess = 4500;
         [self addSubview:self.progressView];
         
         UILabel *subExplainLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.center.x - (self.width * 0.365), self.progressView.maxY + 10, self.width * 0.73, self.height * 0.075)];
@@ -74,18 +71,18 @@
 }
 
 - (void)setCaloriesValue:(NSInteger)value {
-     NSMutableAttributedString *megreString = [[NSMutableAttributedString alloc] initWithString:@"Daily Goal " attributes:LIGHT_ATTRIBUTE];
+     NSMutableAttributedString *megreString = [[NSMutableAttributedString alloc] initWithString:@"Daily Goal " attributes:[UIFont lightAttrubutesSize:20]];
     
-    NSAttributedString *valueString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", value] attributes:BOLD_ATTRIBUTE];
+    NSAttributedString *valueString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", (long)value] attributes:[UIFont boldAttrubutesSize:40]];
     [megreString appendAttributedString:valueString];
-    [megreString appendAttributedString:[[NSAttributedString alloc] initWithString:@" Calories"attributes:LIGHT_ATTRIBUTE]];
+    [megreString appendAttributedString:[[NSAttributedString alloc] initWithString:@" Calories"attributes:[UIFont lightAttrubutesSize:20]]];
     self.caloriesLabel.attributedText = megreString;
 }
 
 - (void)setBodyMessIndexValue:(NSInteger)value {
-    NSMutableAttributedString *megreString = [[NSMutableAttributedString alloc] initWithString:@"Your BMI is " attributes:BMI_BOLD_ATTRIBUTE];
+    NSMutableAttributedString *megreString = [[NSMutableAttributedString alloc] initWithString:@"Your BMI is " attributes:[UIFont bmiLightAttrubutes]];
     
-    NSAttributedString *valueString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", value] attributes:BOLD_ATTRIBUTE];
+    NSAttributedString *valueString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%ld", (long)value] attributes:[UIFont boldAttrubutesSize:40]];
     [megreString appendAttributedString:valueString];
     self.bodyMassIndexLabel.attributedText = megreString;
 }
@@ -94,7 +91,7 @@
     label.textColor = [UIColor whiteColor];
     label.text = text;
     label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+    label.font = [UIFont fontHelveticaNeueLightSize:18];
     label.adjustsFontSizeToFitWidth = YES;
     label.lineBreakMode = NSLineBreakByClipping;
     label.numberOfLines = 0;
@@ -106,7 +103,7 @@
     unitLabel.text = unit;
     unitLabel.textColor = [UIColor whiteColor];
     unitLabel.textAlignment = NSTextAlignmentCenter;
-    unitLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
+    unitLabel.font = [UIFont fontHelveticaNeueLightSize:28];
     [self addSubview:unitLabel];
 }
 

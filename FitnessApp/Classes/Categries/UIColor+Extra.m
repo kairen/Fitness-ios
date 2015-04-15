@@ -22,8 +22,36 @@
     return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:alpah];
 }
 
-+ (UIColor *)boldYellowColor {
-    return [UIColor colorWithIntegerRed:245 green:239 blue:25 alpha:1.0];
++ (UIColor *)pageBasicBackgroundColor {
+    return [UIColor colorWithWhite:0.253 alpha:1.000];
+}
+
++ (UIColor *)pageBlueColor {
+    return  [UIColor colorWithRGBHex:@"#00A0E9" alpha:1.0];
+}
+
++ (UIColor *)pageYellowColor {
+    return [UIColor colorWithRGBHex:@"#FFF100" alpha:1.0];
+}
+
++ (UIColor *)pageGrayColor {
+    return  [UIColor colorWithRGBHex:@"#EFEFEF" alpha:1.0];
+}
+
++ (UIColor *)pageOrangeColor {
+    return  [UIColor colorWithRGBHex:@"#F39800" alpha:1.0];
+}
+
++ (UIColor *)pageRedColor {
+    return  [UIColor colorWithRGBHex:@"#C30D23" alpha:1.0];
+}
+
++ (UIColor *)pagePurpleColor {
+    return  [UIColor colorWithRGBHex:@"#D3A4CA" alpha:1.0];
+}
+
++ (UIColor *)pageGreenColor {
+    return  [UIColor colorWithRGBHex:@"#8FC31F" alpha:1.0];
 }
 
 + (UIColor * )progressBackgroundColor {

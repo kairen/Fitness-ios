@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "WHSettingController.h"
+#import "SVProgressHUD.h"
 #import "HTTPClient.h"
 #import "AppDelegate.h"
 #import "LoginView.h"
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.loginView.registerButton addTarget:self action:@selector(createAccountAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginView.loginButton addTarget:self action:@selector(loginFitnessAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.loginView.facebookButton addTarget:self action:@selector(loginFaceBookAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -35,6 +37,8 @@
 - (void)loginFaceBookAction:(id)sender {
     NSArray *sessions = @[@"public_profile", @"user_friends", @"email"];
     [HTTPClient shareInstance].delegate = self;
+    [SVProgressHUD show];
+    [SVProgressHUD showWithStatus:@"Login Facebook ..." maskType:SVProgressHUDMaskTypeBlack];
     [FBSession openActiveSessionWithReadPermissions:sessions allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
         
         AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;

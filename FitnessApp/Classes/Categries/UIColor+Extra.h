@@ -13,7 +13,14 @@
 + (UIColor *)colorWithIntegerRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpah;
 + (UIColor *)colorWithRGBHex:(NSString *)hex alpha:(CGFloat)alpah;
 
-+ (UIColor *)boldYellowColor;
++ (UIColor *)pageBasicBackgroundColor;
++ (UIColor *)pageBlueColor;
++ (UIColor *)pageGrayColor;
++ (UIColor *)pageOrangeColor;
++ (UIColor *)pageYellowColor;
++ (UIColor *)pageRedColor;
++ (UIColor *)pagePurpleColor;
++ (UIColor *)pageGreenColor;
 + (UIColor *)progressBackgroundColor;
 + (NSArray *)gradientBlueColors;
 + (NSArray *)gradientOrangeColors;
