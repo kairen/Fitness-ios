@@ -103,6 +103,13 @@ NSString * HTTPRequestDomain = @"FitnessNetworkError";
     return nil;
 }
 
+/**
+ *  Challenge Error
+ *
+ *  @param code Is a status code.
+ *
+ *  @return mapping error for status code.
+ */
 + (NSError *)createChallengeErrorWithCode:(HTTPChallengeError)code  {
     switch (code) {
         case HTTPChallengeNotAfterStartTimeError: {

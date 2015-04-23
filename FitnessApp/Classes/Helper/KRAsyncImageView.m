@@ -8,8 +8,7 @@
 
 #import "KRAsyncImageView.h"
 
-@interface KRAsyncImageView () <NSURLConnectionDataDelegate,NSURLConnectionDelegate>
-{
+@interface KRAsyncImageView () <NSURLConnectionDataDelegate,NSURLConnectionDelegate> {
     NSMutableArray *images;
     UIActivityIndicatorView *indicatorView;
     UIImageView *imageView;
@@ -23,8 +22,7 @@
 
 @implementation KRAsyncImageView
 
-- (NSString*)filePath
-{
+- (NSString*)filePath {
 	if (!_filePath) {
 		NSString *imageCachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 		self.filePath = [imageCachePath stringByAppendingPathComponent:self.imageName];
@@ -33,21 +31,18 @@
 }
 
 #pragma mark - Remove All Data and Handler
--(void) removeAllHandler
-{
+- (void)removeAllHandler {
     [self animationDidFinish];
     [self prepareForLoad];
 }
 
--(void) removeIndicatorView
-{
+- (void)removeIndicatorView {
     [indicatorView stopAnimating];
     [indicatorView removeFromSuperview];
     indicatorView = nil;
 }
 
-- (void) removeSubViews
-{
+- (void)removeSubViews {
     [self removeIndicatorView];
     for(UIView *view in self.subviews) {
         [view removeFromSuperview];
@@ -58,8 +53,7 @@
     self.filePath = nil;
 }
 
-- (void) prepareForLoad
-{
+- (void)prepareForLoad {
     [_connection cancel];
     _connection = nil;
     _data = nil;
@@ -67,16 +61,14 @@
     [self removeSubViews];
 }
 
--(void) animationDidFinish
-{
+- (void)animationDidFinish {
     [imageView stopAnimating];
     images = nil;
     imageView.animationImages = nil;
 }
 
 #pragma mark - Loading Method URL and Data
-- (void)loadImageFromData:(NSData*)cacheData  key:(NSString*)key
-{
+- (void)loadImageFromData:(NSData*)cacheData key:(NSString*)key {
     [self prepareForLoad];
     UIImage *reSizeImage;
     
@@ -112,8 +104,8 @@
     
     reSizeImage = nil;
 }
-- (void)loadImageFromURL:(NSURL*)url key:(NSString*)key
-{
+
+- (void)loadImageFromURL:(NSURL*)url key:(NSString*)key {
     [self prepareForLoad];
 
     NSString *lastKey = [[url.absoluteString componentsSeparatedByString:@"/"] lastObject];
@@ -142,16 +134,14 @@
 }
 
 #pragma mark - Connection Delegate Method
-- (void)connection:(NSURLConnection *)theConnection	didReceiveData:(NSData *)data
-{
+- (void)connection:(NSURLConnection *)theConnection	didReceiveData:(NSData *)data {
     if(!self.data) {
         self.data = [NSMutableData data];
     }
     [self.data appendData:data];
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)theConnection
-{
+- (void)connectionDidFinishLoading:(NSURLConnection*)theConnection {
     [self removeIndicatorView];
     UIImage *image = [UIImage imageWithData:self.data];
 
@@ -186,8 +176,7 @@
     _connection = nil;
 }
 
-- (void)connection:(NSURLConnection *)theConnection didFailWithError:(NSError *)error
-{
+- (void)connection:(NSURLConnection *)theConnection didFailWithError:(NSError *)error {
     [self removeIndicatorView];
     imageView.image = [UIImage loadFileImageName:@"loadingFailed.png"];
     self.data = nil;

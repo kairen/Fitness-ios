@@ -10,7 +10,8 @@
 
 @interface KRAsyncImageView : UIView
 
-- (void)loadImageFromURL:(NSURL*)url key:(NSString*)key;
+- (void)loadImageFromURL:(NSURL*)url key:(NSString*)key ;
 - (void)loadImageFromData:(NSData*)cacheData key:(NSString*)key;
--(void) removeAllHandler;
+- (void)removeAllHandler;
+
 @end
