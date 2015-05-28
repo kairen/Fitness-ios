@@ -10,6 +10,7 @@
 
 
 #define HTTP_LOCAL_MODE 0
+
 #if (HTTP_LOCAL_MODE)
 
 NSString * HTTPServerURLString = @"http://192.168.1.99:8081";
@@ -19,7 +20,6 @@ NSString * HTTPServerURLString = @"http://192.168.1.99:8081";
 NSString * HTTPServerURLString = @"http://wondercore.herokuapp.com";
 
 #endif
-
 
 /**
  *  User Authentication

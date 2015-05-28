@@ -41,6 +41,7 @@
     leftImage.image = [UIImage fitImage:imageName size:leftImage.size];
     textField.leftView = leftImage;
     textField.leftViewMode = UITextFieldViewModeAlways;
+    textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     textField.keyboardType = UIKeyboardTypeURL;
     textField.adjustsFontSizeToFitWidth = YES;
     textField.delegate = self;

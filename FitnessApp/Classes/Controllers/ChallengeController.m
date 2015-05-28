@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.myGoalView = [[MyGoalView alloc] initWithFrame:CGRectMake(0, 70, self.view.width, self.view.height - 70 - 60)];
+    self.myGoalView = [[MyGoalView alloc] initWithFrame:CGRectMake(0, 70, self.view.width, self.view.height - 70 - 60 - 59)];
     [self.view addSubview:self.myGoalView];
 }
 

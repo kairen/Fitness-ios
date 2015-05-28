@@ -12,7 +12,6 @@
 
 @interface BodyMetric : JSONModel
 
-
 @property (nonatomic, assign) NSNumber *body_metric_id;
 @property (nonatomic, strong) User<Ignore> *user;
 @property (nonatomic, strong) NSDate *recordTime;

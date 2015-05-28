@@ -34,7 +34,7 @@
             divider.backgroundColor = [UIColor colorWithRed:41.f / 255.f green:182.f / 255.f blue:238.f / 255.f alpha:1.f];
             [self addSubview:divider];
         }
-        
+
         UILabel *allAndProductLabel = [[UILabel alloc] initWithFrame:CGRECT_MAKE_SCALAR(0.1, 0.16, 1, 0.03, frame)];
 //        allAndProductLabel.backgroundColor = [UIColor redColor];
         allAndProductLabel.text = @"All / Product";

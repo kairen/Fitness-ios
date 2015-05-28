@@ -39,6 +39,7 @@
     [HTTPClient shareInstance].delegate = self;
     [SVProgressHUD show];
     [SVProgressHUD showWithStatus:@"Login Facebook ..." maskType:SVProgressHUDMaskTypeBlack];
+    
     [FBSession openActiveSessionWithReadPermissions:sessions allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
         
         AppDelegate *appDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
@@ -52,6 +53,7 @@
         }
     }];
 }
+
 - (void)loginFitnessAction:(id)sender {
     NSString *account = self.loginView.accountField.text;
     NSString *passwd = self.loginView.passwdField.text;

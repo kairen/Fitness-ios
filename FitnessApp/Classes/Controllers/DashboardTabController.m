@@ -111,7 +111,6 @@
 }
 
 - (void)menuView:(MenuView *)menuView didSeletedButtonIndex:(NSInteger)buttonIndex {
-    NSLog(@"%d", buttonIndex);
     if(buttonIndex <= 2) {
         SocialController *socailController = [[SocialController alloc] initWithFrame:self.view.bounds socialPage:buttonIndex];
         [self addChildViewController:socailController];

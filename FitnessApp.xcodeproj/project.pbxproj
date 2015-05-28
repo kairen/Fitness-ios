@@ -467,9 +467,9 @@
 		B017C5CE1ABFBB7500AB0DCD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B029CFF71ADEDB80002CB2C3 /* Calendar */,
 				B0277AC81ADEDF6600E6C021 /* KRAsyncImageView.h */,
 				B0277AC91ADEDF6600E6C021 /* KRAsyncImageView.m */,
-				B029CFF71ADEDB80002CB2C3 /* Calendar */,
 				B0E08FF01AC101E500764149 /* TransitionAnimation.h */,
 				B0E08FF11AC101E500764149 /* TransitionAnimation.m */,
 				B029CFBA1ADE12B0002CB2C3 /* SVProgressHUD */,

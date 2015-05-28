@@ -197,7 +197,6 @@ static NSString * const HTTPAlertViewTitle = @"HTTP Status";
     }];
 }
 
-
 - (void)getDailyRecommendedCaloriesCompletation:(HTTPResponseBlock)complete {
     typeof(self) __weak weakSelf = self;
     [self requestURL:HTTPGetDailyRecommendedCaloriesURLString method:HTTPRequestPOST parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
