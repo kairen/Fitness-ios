@@ -25,7 +25,23 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb1545840765662676</string>
+				<string>&lt;?xml</string>
+				<string>version="1.0"</string>
+				<string>encoding="UTF-8"?&gt;
+&lt;!DOCTYPE</string>
+				<string>plist</string>
+				<string>PUBLIC</string>
+				<string>"-//Apple//DTD</string>
+				<string>PLIST</string>
+				<string>1.0//EN"</string>
+				<string>"http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist</string>
+				<string>version="1.0"&gt;
+&lt;array&gt;
+	&lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+&lt;/array&gt;
+&lt;/plist&gt;
+</string>
 			</array>
 		</dict>
 	</array>
